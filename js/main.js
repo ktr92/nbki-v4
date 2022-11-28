@@ -1,5 +1,19 @@
 $(document).ready(function () {
+    $('.changelang__button').on('click', function(e) {
+        e.preventDefault()
+        $(this).siblings('.changelang__more').slideToggle()
+    })
 
+    if ($(window).width() <= 999) {
+        $('.itemcardlist__header').on('click', function(e) {
+            e.preventDefault()
+            $(this).toggleClass('active')
+            $(this).siblings('.itemcardlist--acc').slideToggle()
+        })
+    }
+
+
+    // //
     $('.js-rsmainslider').each(function () {
         $(this).slick({
             infinite: true,

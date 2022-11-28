@@ -1794,7 +1794,7 @@ body {
 }
 
 .headertop__link a.active:after {
-	content: url(../img/arrowmenu.svg);
+	content: url(../images/arrowmenu.svg);
 	position: absolute;
 	right: 0;
 	top: 13px;
@@ -1802,7 +1802,7 @@ body {
 }
 
 .headertop__link a.active.clicked:after {
-	content: url(../img/arrowmenu.svg);
+	content: url(../images/arrowmenu.svg);
 	position: absolute;
 	right: 0;
 	top: 8px;
