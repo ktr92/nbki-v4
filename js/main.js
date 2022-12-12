@@ -9,11 +9,25 @@ $(document).ready(function () {
     })
 
     if ($(window).width() <= 999) {
+
+        $('[data-slider="slider_card_xs"]').each(function() {
+            $(this).not('.slick-initialized').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                fade: true
+            });
+        })
+    }   
+ 
+
+    if ($(window).width() <= 999) {
         $('.itemcardlist__header').on('click', function(e) {
             e.preventDefault()
             $(this).toggleClass('active')
             $(this).siblings('.itemcardlist--acc').slideToggle()
-            $(this).siblings('.itemcardlist--acc').find('.itemcardlist--slider').not('.slick-initialized').slick({
+            $(this).siblings('.itemcardlist--acc').find('[data-slider="slider_card_acc"]').not('.slick-initialized').slick({
                 infinite: true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
