@@ -7,6 +7,10 @@ $(document).ready(function () {
         e.preventDefault()
         $(this).closest('.tabstoggler').toggleClass('active')
     })
+    $('.tablecolor__scroller').on('click', function(e) {
+        $(".tablecolor").animate({scrollLeft:"+=180px"})
+    })
+
 
     if ($(window).width() <= 999) {
 
