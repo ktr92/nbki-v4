@@ -476,6 +476,7 @@ margin-bottom: 49px;
 .titlelink__links a {
   display: block;
   margin-left: 30px;
+  white-space: nowrap;
 }
 
 .nbkiv4 .notification__text_small {
@@ -763,6 +764,9 @@ line-height: 27px;
 .fw-400 {
   font-weight: 400;
 }
+*.p-50 {
+  padding: 50px !important;
+}
 /* .itemcardlist__item_col3:nth-last-child(1),
 .itemcardlist__item_col3:nth-last-child(2),
 .itemcardlist__item_col3:nth-last-child(3) {
@@ -925,6 +929,30 @@ line-height: 20px;
 
 .p-32-32-43-32 {
   padding: 32px 32px 43px 32px;
+}
+
+.itemcard__number {
+  font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+background: #4563FF;
+border-radius: 50%;
+/* #FFFFFF */
+width: 65px;
+height: 65px;
+color: #FFFFFF;
+}
+.lh-22{
+  line-height: 22px;
+}
+
+.p-50-32 {
+  padding: 50px 32px;
 }
 
 @media (min-width: 1000px) {
