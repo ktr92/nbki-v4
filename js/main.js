@@ -27,17 +27,18 @@ $(document).ready(function () {
  
 
     if ($(window).width() <= 999) {
-        $('.itemcardlist__header').on('click', function(e) {
-            e.preventDefault()
-            $(this).toggleClass('active')
-            $(this).siblings('.itemcardlist--acc').slideToggle()
-            $(this).siblings('.itemcardlist--acc').find('[data-slider="slider_card_acc"]').not('.slick-initialized').slick({
-                infinite: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                dots: true,
-                fade: true
-            });
+        $('.itemcardlist__header').each(function(e){
+            $(this).on('click', function(e) {
+                $(this).toggleClass('active')
+                $(this).siblings('.itemcardlist--acc').slideToggle()
+                $(this).siblings('.itemcardlist--acc').find('[data-slider="slider_card_acc"]').not('.slick-initialized').slick({
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true,
+                    fade: true
+                });
+            })
         })
 
      
@@ -184,7 +185,7 @@ $(document).ready(function () {
 
    
 
-    // ховер на верхний текст
+    // ховер на&nbsp;верхний текст
     $('.howtabs__passp_1').on('mouseover', function (e) {
         $('.howtabs__passp').addClass('el-inactive ');
         $(this).removeClass('el-inactive');
@@ -196,7 +197,7 @@ $(document).ready(function () {
         $('.howtabs__item2').removeClass('before-inactive ');
     })
 
-    // ховер на нижний текст
+    // ховер на&nbsp;нижний текст
     $('.howtabs__passp_2').on('mouseover', function (e) {
         $('.howtabs__passp').addClass('el-inactive ');
         $(this).removeClass('el-inactive');
@@ -208,7 +209,7 @@ $(document).ready(function () {
         $('.howtabs__item2').removeClass('after-inactive ');
     })
 
-    // ховер на картинку 1
+    // ховер на&nbsp;картинку 1
     $('.howtabs__item1').on('mouseover', function (e) {
         $('.howtabs__passp').addClass('el-inactive ');
         $(this).addClass('pseudo-inactive');
@@ -221,7 +222,7 @@ $(document).ready(function () {
         $('.howtabs__item2').removeClass('pseudo-inactive')
     })
 
-    // ховер на картинку 2
+    // ховер на&nbsp;картинку 2
     $('.howtabs__item2').on('mouseover', function (e) {
         $('.howtabs__passp').addClass('el-inactive ');
         $(this).addClass('pseudo-inactive');
@@ -884,7 +885,7 @@ $(document).ready(function () {
     $(document).on('click', '.js-show-more', function (e) {
         e.preventDefault();
 
-        var targetContainer = $('.js-ajax-content'), //  Контейнер, в котором хранятся элементы
+        var targetContainer = $('.js-ajax-content'), //  Контейнер, в&nbsp;котором хранятся элементы
             url = $('.js-show-more').attr('data-url'); //  URL, из которого будем брать элементы
 
         if (url !== undefined) {
@@ -900,7 +901,7 @@ $(document).ready(function () {
                     var elements = $(data).find('.js-ajax-item'), //  Ищем элементы
                         pagination = $(data).find('.js-show-more-wrapper'); //  Ищем навигацию
 
-                    targetContainer.append(elements); //  Добавляем посты в конец контейнера
+                    targetContainer.append(elements); //  Добавляем посты в&nbsp;конец контейнера
                     pagination.insertAfter(targetContainer); //  добавляем навигацию следом
 
                 }
@@ -928,7 +929,7 @@ $(document).ready(function () {
                     var elements = $(data).find('[data-entity="ajax-content"]'), //  Ищем элементы
                         pagination = $(data).find('.js-load-more-wrapper'); //  Ищем навигацию
 
-                    $('[data-entity="ajax-content"]:last').append(elements); //  Добавляем посты в конец контейнера
+                    $('[data-entity="ajax-content"]:last').append(elements); //  Добавляем посты в&nbsp;конец контейнера
                     // pagination.insertAfter(targetContainer); //  добавляем навигацию следом
 
                 }
