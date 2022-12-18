@@ -10,6 +10,11 @@ $(document).ready(function () {
     $('.tablecolor__scroller').on('click', function(e) {
         $(".tablecolor").animate({scrollLeft:"+=180px"})
     })
+    $('[data-click="corp__links"]').on('click', function(e) {
+        e.preventDefault()
+        $('[data-toggle="corp__links"]').toggle()
+        $('[data-place="corp__links"]').toggle()
+    })
 
 
     if ($(window).width() <= 999) {
