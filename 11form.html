@@ -606,32 +606,35 @@
       </div>
     </header>
     <main>
-      <div class="corpindex">
-        <div class="container">
-          <div class="corpindex__wrapper">
-            <div class="corpindex__title">
-              <h1>Корпоративным <br> клиентам </h1>
-            </div>
-            <!-- /.corpindex__title -->
-            <div class="corpindex__image">
-              <div class="corpindex__img">
-                <img src="images/corpindex.svg" alt="">
-              </div>
-              <!-- /.corpindex__img -->
-            </div>
-            <!-- /.corpindex__image -->
-          </div>
-          <!-- /.corpindex__wrapper -->
-        </div>
-        <!-- /.container -->
-      </div>
-      <!-- /.corpindex -->
-      <div class="page page_white page_navs corppage_v4 nbki_v4">
+      
+      <div class="page page_white  corppage_v4 nbki_v4">
         <div class="container">
           <div class="pagecontent">
+            <div class="itemcardlist__items xs-mb-30">
+              <div class="itemcardlist__item itemcardlist__item_full" >
+                <div class="itemcard itemcard__border p-30 xs-p-20-15">
+                    <div class="itemcard__imgtitle mb-30">
+                      <div class="itemcard__icon">
+                        <img src="images/registercorp.svg" alt="">
+                      </div>
+                      <div class="itemcard__title">Подключиться к НБКИ
+                      </div>
+                    </div>
+                    <div class="itemcard__text mb-30 xs-mb-20">
+                      <p>Если вы хотите стать клиентом НБКИ, вам необходимо заполнить все поля данной анкеты. </p>
+                      <p>
+                        После заполнения и нажатия кнопки «Отправить», Ваша заявка будет направлена менеджеру НБКИ, <br> который подготовит необходимый пакет документов для заключения договора, и свяжется с вами.</p>
+                    </div>
+                    <div class="itemcard__text">
+                      <small>Поля, отмеченные звездочкой (*), обязательны для заполнения. </small>
+                    </div>
+                </div>
+              </div>
+            </div>
+
             <form action="" data-form="corp">
               <div class="stepform mb-20">
-                <div class="stepform__aside ">
+                <div class="stepform__aside xs-mb-18">
                   <div class="stepform__steps whitecard  p-43-35-35-35">
                     <div class="stepform__step active" data-stepindicator="step1">
                       <span class="stepform__steptitle">Организация</span>
@@ -640,17 +643,20 @@
                       <span class="stepform__steptitle">Вид деятельности</span>
                     </div>
                     <div class="stepform__step" data-stepindicator="step3">
-                      <span class="stepform__steptitle">Услуги</span>
+                      <span class="stepform__steptitle">Заявки</span>
                     </div>
                     <div class="stepform__step" data-stepindicator="step4">
-                      <span class="stepform__steptitle">Личные контакты</span>
+                      <span class="stepform__steptitle">Услуги</span>
                     </div>
                     <div class="stepform__step" data-stepindicator="step5">
+                      <span class="stepform__steptitle">Личные контакты</span>
+                    </div>
+                    <div class="stepform__step" data-stepindicator="step6">
                       <span class="stepform__steptitle">Согласие на обработку данных</span>
                     </div>
                   </div>
                 </div>
-                <div class="stepform__main    whitecard p-50 ">
+                <div class="stepform__main    whitecard p-50 xs-p-30-20">
                   <div class="stepform__items">
                     <div class="stepform__item active" data-step="step1">
                       <div class="stepform__stepwrapper">
@@ -658,12 +664,12 @@
                           <div class="">
                             <div class="formcols__item">
                               <div class="formcols__input">
-                                <input required name="n1_1" type="text" value="" maxlength="80" class="forminput " placeholder="Название *">
+                                <input required name="n1_1" type="text" value="" maxlength="80" class="forminput " placeholder="Название&nbsp;*">
                               </div>
                             </div>
                             <div class="formcols__item">
                               <div class="formcols__input">
-                                <input required name="n1_2" type="text" value="" maxlength="80" class="forminput " placeholder="ИНН *">
+                                <input required name="n1_2" type="text" value="" maxlength="80" class="forminput " placeholder="ИНН&nbsp;*">
                               </div>
                             </div>
                             <div class="formcols__item">
@@ -673,7 +679,7 @@
                             </div>
                             <div class="formcols__item">
                               <div class="formcols__input">
-                                <input required name="n1_4" type="text" value="" maxlength="80" class="forminput " placeholder="Адрес *">
+                                <input required name="n1_4" type="text" value="" maxlength="80" class="forminput " placeholder="Адрес&nbsp;*">
                               </div>
                             </div>
                           </div>
@@ -684,7 +690,7 @@
                       <div class="stepform__stepwrapper">
                         <div class="stepform__inputs">
                           <div class="stepform__title">
-                            <span>Вид деятельности: *</span>
+                            <span>Вид деятельности:&nbsp;*</span>
                             </span>
                           </div>
                           <div class="formcols__input  n2block">
@@ -749,7 +755,7 @@
                       <div class="stepform__stepwrapper">
                         <div class="stepform__inputs">
                             <div class="stepform__title">
-                              <span>Включена ли ваша организация в реестр ЦБ РФ *</span>
+                              <span>Включена ли ваша организация в реестр ЦБ РФ&nbsp;*</span>
                               </span>
                             </div>
                             <div class="radioblock">
@@ -773,7 +779,7 @@
                       <div class="stepform__stepwrapper">
                         <div class="stepform__inputs">
                             <div class="stepform__title">
-                              <span>Примерное кол-во заявок в месяц *</span>
+                              <span>Примерное кол-во заявок в месяц&nbsp;*</span>
                               </span>
                             </div>
                             <div class="radioblock">
@@ -798,7 +804,7 @@
                           </div>
                           <div class="formcols__item">
                             <div class="formcols__input">
-                                <input name="n4_3" type="text" value="" maxlength="50" class="forminput" placeholder="В какой программе ведете учет заемщиков? *">
+                                <input name="n4_3" type="text" value="" maxlength="50" class="forminput" placeholder="В какой программе ведете учет заемщиков?&nbsp;*">
                                                 </div>
                         </div>
                           </div>
@@ -808,7 +814,7 @@
                       <div class="stepform__stepwrapper">
                         <div class="stepform__inputs">
                             <div class="stepform__title">
-                              <span>Какие услуги вас интересуют: *</span>
+                              <span>Какие услуги вас интересуют:&nbsp;*</span>
                               </span>
                             </div>
                             <div class="formcols__input  n2block">
@@ -846,10 +852,10 @@
                       <div class="stepform__stepwrapper">
                         <div class="stepform__inputs">
                             <div class="stepform__title">
-                              <span>Какие услуги вас интересуют: *</span>
+                              <span>Подтвердите отправку данных:&nbsp;*</span>
                               </span>
                             </div>
-                            <div class="formcols__input  n2block">
+                            <div class="formcols__input  n2block mb-60">
                               <div class="check-block check-block_big ">
                                 <input required name="n6_0" id="n6_0" type="checkbox" class="inputcheckbox n2">
                                 <label for="n6_0">
@@ -858,6 +864,9 @@
                                     <br><br> Перечень действий (операций) с персональными данными, которые будут совершаться (с использованием и без использования средств автоматизации): сбор, запись, систематизация, хранение, уточнение (обновление, изменение), извлечение, использование, блокирование, удаление, уничтожение.</span>
                                 </label>
                               </div>
+                            </div>
+                            <div class="formcols__input  n2block mb-60">
+                              <!-- captcha -->
                             </div>
                           
                           </div>
@@ -914,8 +923,38 @@
 
               function validateForm() {
                 // This function deals with validation of the form fields
-                let x, y, i, valid = true;
-                x = document.querySelectorAll("[data-step]");
+
+                // at least 1 checkbox must be checked
+                let x = document.querySelectorAll("[data-step]");
+                let checkboxes = x[currentTab].querySelectorAll(".check-block input[type='checkbox']");
+
+                if (checkboxes.length > 0) {
+                  let checkedOne = Array.prototype.slice.call(checkboxes).some(x => x.checked);
+
+                  let y, i, valid = true;
+                 
+                  
+                    if (!checkedOne) {
+                      for (i = 0; i < checkboxes.length; i++) {
+                        //  checkboxes[i].className += " error_input";
+                          
+
+                        } 
+                      valid = false;
+                    } else {
+                      for (i = 0; i < checkboxes.length; i++) {
+                        checkboxes[i].classList.remove("error_input");
+                        }
+                      }
+                    
+                    
+                  // If the valid status is true, mark the step as finished and valid:
+                  if (valid) {
+                    document.querySelectorAll("[data-step]")[currentTab].className += " success";
+                  }
+                  return valid; // return the valid status
+                } else {
+                  let y, i, valid = true;
                 y = x[currentTab].querySelectorAll("input[required]");
                 // A loop that checks every input field in the current tab:
                 for (i = 0; i < y.length; i++) {
@@ -934,6 +973,8 @@
                   document.querySelectorAll("[data-step]")[currentTab].className += " success";
                 }
                 return valid; // return the valid status
+                }
+                
               }
 
               function fixStepIndicator(n) {
