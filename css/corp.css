@@ -53,6 +53,10 @@ line-height: 17px;
   margin-bottom: 0;
 }
 
+.itemcard__title a:hover {
+  color: #4563FF;
+}
+
 .itemcard {
   background: #FFFFFF;
 border-radius: 5px;
@@ -160,6 +164,10 @@ color: #000000;
   
   
   color: #000000;
+}
+
+.itemcardlist__item_col2 .itemcard__text a.link_blue {
+  text-decoration: none;
 }
 .white_block {
   background-color: #fff;
@@ -531,7 +539,7 @@ ul.navpages__list li.active:after {
   border-radius: 0;
 }
 .imgtab {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 .imgtab__wrapper {
   display: flex;
@@ -1680,7 +1688,7 @@ line-height: 20px;
    
   }
   .itemcardlist--slider .slick-dots {
-    bottom: -20px;
+    bottom: -10px;
   }
   .itemcardlist--slider .slick-dots li button {
     width: 10px;
@@ -2042,13 +2050,15 @@ line-height: 17px;
 .tablecolor__scroller {
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 51.16%, rgba(255, 255, 255, 0) 51.17%, rgba(255, 255, 255, 0.79) 71.51%, #FFFFFF 100%);
   height: 375px;
-  bottom: -75px;
   width: 35px;
   position: absolute;
   right: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.tablecolor__scroller  svg {
+  margin-right: -18px;
 }
 .notification__img {
   margin-bottom: 20px;
@@ -2266,5 +2276,15 @@ line-height: 29px;
 }
 .stepform__item .check-block_flex {
   max-width: 100%;
+}
+.itemcardlist--slider .itemcard {
+  margin-bottom: 0 !important;
+}
+
+.itemcardlist__item.itemcardlist__item_col3 {
+  margin-bottom: 20px !important;
+}
+.itemcardlist__item_col2 .itemcard__text {
+  line-height: 22px;
 }
 }
