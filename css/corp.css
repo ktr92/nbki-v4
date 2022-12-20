@@ -1634,12 +1634,12 @@ text-align: left;
 
 }
 
-.tablecolor__body .tablecolor__col:last-child .tablecolor__tooltiptext {
+.tablecolor__body .tablecolor__col:nth-child(10) .tablecolor__tooltiptext {
   right: 25px;
   left: unset;
   transform: none;
 }
-.tablecolor__body .tablecolor__col:last-child .tablecolor__tooltiptext::after  {
+.tablecolor__body .tablecolor__col:nth-child(10) .tablecolor__tooltiptext::after  {
  left: calc(100% - 28px);
 }
 .tablecolor__body .tablecolor__col:first-child .tablecolor__tooltiptext {
@@ -1656,7 +1656,7 @@ text-align: left;
 .tablecolor__cell_s1:after {
   content: "Сегменты";
   position: absolute;
-  left: -19px;
+  left: -20px;
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   font-weight: 400;
@@ -1669,14 +1669,14 @@ width: 19px;
 .tablecolor__cell_s2:after {
   content: "Рисковый";
   position: absolute;
-  left: -19px;
+  left: -20px;
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   font-weight: 400;
 font-size: 11px;
 line-height: 21px;
 bottom: -2px;
-height: calc(4 * 100%);
+height: calc(4 * 100% + 8px);
 display: flex;
 justify-content: center;
 width: 19px;
@@ -1685,14 +1685,14 @@ border-top: 2px solid rgba(174, 181, 209, 0.3);
 .tablecolor__cell_s3:after {
   content: "Стандартный";
   position: absolute;
-  left: -19px;
+  left: -20px;
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   font-weight: 400;
 font-size: 11px;
 line-height: 21px;
 bottom: -2px;
-height: calc(3 * 100%);
+height: calc(3 * 100% + 6px);
 display: flex;
 justify-content: center;
 width: 19px;
@@ -1701,18 +1701,18 @@ border-top: 2px solid rgba(174, 181, 209, 0.3);
 .tablecolor__cell_s4:after {
   content: "Премиальный";
   position: absolute;
-  left: -19px;
+  left: -20px;
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   font-weight: 400;
 font-size: 11px;
 line-height: 21px;
-bottom: -2px;
-height: calc(3 * 100%);
+bottom: -1px;
+height: calc(3 * 100% + 6px);
 display: flex;
 justify-content: center;
 width: 19px;
-border-top: 2px solid rgba(174, 181, 209, 0.3);
+border-top: 1px solid rgba(174, 181, 209, 0.3);
 }
 .tablecolor__cell_s1:before {
   content: url(../images/line58.svg);
@@ -1727,6 +1727,10 @@ border-bottom: 2px solid rgba(174, 181, 209, 0.3);
 padding-top: 17px;
 width: 19px;
 bottom: -2px;
+}
+.tablecolor__cell:after {
+  background-color: #f5f7fa;
+  z-index: 99;
 }
 .tablecolor_type2 .tablecolor__wrapper {
   padding-left: 19px;
@@ -1801,7 +1805,58 @@ bottom: -2px;
   
 }
 @media (max-width: 999px) {
+  .tablecolor_type2 .tablecolor__cell_xs {
+    border-right: none;
+  }
+  .tablecolor.tablecolor_mobile {
+    overflow-y: hidden;
+  }
+  .tablecolor__tooltiptext {
+    max-width: 177px !important;
+    padding: 10px 7px;
+  }
+  .tablecolor_type2 .tablecolor__wrapper {
+    background: #f5f7fa;
+  }
 
+  .tablecolor_type2 .tablecolor__cell {
+    background: #f5f7fa;
+  }
+  .tablecolor_type2 .tablecolor__aside  .tablecolor__cell {
+    z-index: 9;
+    position: relative;
+  }
+  .tablecolor_type2 .tablecolor__main {
+    margin-left: 79px;
+  }
+  .tablecolor_type2 .tablecolor__body {
+    margin-top: 40px;
+  }
+  .tablecolor_type2 .tablecolor__col{
+    width: 60px;
+  }
+  .tablecolor__cell_s1:after {
+    bottom: 0;
+  }
+  .tablecolor__cell_s1:after,
+  .tablecolor__cell_s2:after,
+  .tablecolor__cell_s3:after,
+  .tablecolor__cell_s4:after {
+    font-size: 12px;
+
+  }
+  .tablecolor_mobile .tablecolor__aside {
+    z-index: 9;
+  }
+  .tablecolor__cell_s1:before {
+    z-index: 999;
+  }
+  .tablecolor_type2 .tablecolor__cell_row2 {
+    height: 74px;
+  }
+  .tablecolor_type2 .tablecolor__cell_xs {
+    height: 35px;
+  }
   .nbkiv4 .notification__text_small br {
     display: none;
   }
@@ -2290,6 +2345,10 @@ line-height: 20px;
 }
 .tablecolor__scroller  svg {
   margin-right: -18px;
+}
+.tablecolor_type2 .tablecolor__scroller {
+  height: 409px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 51.16%, rgba(255, 255, 255, 0) 51.17%, rgba(255, 255, 255, 0.79) 71.51%, #FFFFFF 100%);
 }
 .notification__img {
   margin-bottom: 20px;
