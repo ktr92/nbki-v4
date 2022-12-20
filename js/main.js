@@ -8,7 +8,7 @@ $(document).ready(function () {
         $(this).closest('.tabstoggler').toggleClass('active')
     })
     $('.tablecolor__scroller').on('click', function(e) {
-        $(".tablecolor").animate({scrollLeft:"+=180px"})
+        $(this).closest(".tablecolor").animate({scrollLeft:"+=180px"})
     })
     $('[data-click="corp__links"]').on('click', function(e) {
         e.preventDefault()
