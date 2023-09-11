@@ -8,7 +8,12 @@ $(document).ready(function () {
         $(this).closest('.tabstoggler').toggleClass('active')
     })
     $('.tablecolor__scroller').on('click', function(e) {
-        $(".tablecolor").animate({scrollLeft:"+=180px"})
+        $(this).closest(".tablecolor").animate({scrollLeft:"+=180px"})
+    })
+    $('[data-click="corp__links"]').on('click', function(e) {
+        e.preventDefault()
+        $('[data-toggle="corp__links"]').toggle()
+        $('[data-place="corp__links"]').toggle()
     })
 
 
@@ -46,10 +51,10 @@ $(document).ready(function () {
 
     $("a.scrollTo").click(function () {
 
-        var destination = $($(this).attr("href")).offset().top - 90;
+        var destination = $($(this).attr("href")).offset().top - 30;
         $("html:not(:animated),body:not(:animated)").animate({
           scrollTop: destination
-        }, 1100);
+        }, 400);
         return false;
       });
 
@@ -886,7 +891,7 @@ $(document).ready(function () {
         e.preventDefault();
 
         var targetContainer = $('.js-ajax-content'), //  Контейнер, в&nbsp;котором хранятся элементы
-            url = $('.js-show-more').attr('data-url'); //  URL, из которого будем брать элементы
+            url = $('.js-show-more').attr('data-url'); //  URL, из&nbsp;которого будем брать элементы
 
         if (url !== undefined) {
             $.ajax({
@@ -914,7 +919,7 @@ $(document).ready(function () {
     $(document).on('click', '.js-load-more', function (e) {
         e.preventDefault();
 
-        var url = $('.js-load-more').attr('data-url'); //  URL, из которого будем брать элементы
+        var url = $('.js-load-more').attr('data-url'); //  URL, из&nbsp;которого будем брать элементы
 
         if (url !== undefined) {
             $.ajax({

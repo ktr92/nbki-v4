@@ -1,0 +1,132 @@
+.calcpage h1 {
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px; /* 117.647% */
+  letter-spacing: -0.68px;
+}
+
+.calcpage .nbki_v4.wrapperwhite {
+  padding: 32px;
+}
+
+.calcform__input {
+  position: relative;
+  padding-top: 9px;
+  margin-top: 9px;
+}
+.calcform__input .placeholder {
+  /* p4_regular */
+  font-family: Formular;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 150% */
+  color: #7b7794;
+  position: absolute;
+  left: 15px;
+  display: block;
+  white-space: nowrap;
+  transition: all, 0.2s;
+
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.calcform__input .placeholder {
+  padding: 0 5px;
+  top: -10px;
+  background-color: #fff;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.calcform__input input {
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--Gray-Border, #cecfda);
+  background: #fff;
+  display: block;
+  width: 100%;
+}
+.calcform__input label {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.calcform__input {
+  width: 250px;
+}
+
+.calcform__block {
+}
+.calcform__row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.calcform__col {
+}
+.calcform__item {
+}
+.calcform__input {
+}
+.form__label {
+}
+.p-inputtext {
+}
+.p-component {
+}
+.form__input {
+}
+.placeholder {
+}
+.calcform__slider {
+}
+
+.noUi-horizontal .noUi-handle {
+  margin-left: -8px;
+  margin-right: -8px;
+  width: 20px;
+  height: 20px;
+  top: -9px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ffffff;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid #4563ff;
+}
+
+.noUi-target {
+  background: rgba(10, 0, 51, 0.1);
+  height: 1px;
+  border-radius: 0;
+  border: none;
+  border-radius: 2px;
+}
+.noUi-connects {
+  overflow: visible;
+}
+.noUi-connect {
+  background: #4563ff;
+  height: 3px;
+  position: relative;
+}
+.noUi-connect:after {
+  content: "";
+  height: 3px;
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: -1px;
+  background: #4563ff;
+}
+.range-slider__ui {
+  margin: 20px 0;
+}

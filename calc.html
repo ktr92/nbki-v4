@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NEWNBKI</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="libs/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/slick.css">
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="libs/lightbox/css/lightbox.min.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" type="text/css" href="fonts/fonts.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/restyle.css">
+  <link rel="stylesheet" type="text/css" href="css/template_styles.css">
+  <link rel="stylesheet" type="text/css" href="css/jQuery.inputSliderRange.css">
+  <link rel="stylesheet" type="text/css" href="css/nouislider.min.css">
+  <link rel="stylesheet" type="text/css" href="css/corp.css">
+  <link rel="stylesheet" type="text/css" href="css/calc.css">
+  <!--[if lt IE 9]>
+																<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+																<![endif]-->
+</head>
+
+<body>
+  <header id="header" class="header clearfix">
+    <div class="header__main clearfix">
+      <div class="container">
+        <div class="headermain">
+          <div class="headermain__items">
+            <div class="headermain__item">
+              <div class="headerrow">
+                <div class="burgermenu burgermenu_desktop">
+                  <button class="headermain__menu js-menu js-menu_desktop">
+                    <img src="/images/burger.svg" alt="" class="burgermenu--open ">
+                    <img src="/images/Union.svg" alt="" class="burgermenu--close ">
+                  </button>
+                </div>
+                <div class="headerleft">
+                  <div class="logo">
+                    <a href="/">
+                      <img src="/images/nbki-logo.svg" alt="" class="nbki-logo_desktop">
+                      <img src="/images/nbki-logo2.svg" alt="" class="nbki-logo_mobile">
+                    </a>
+                  </div>
+                </div>
+                <div class="headerchange">
+                  <div class="headertop__links">
+                    <div class="headertop__link notcurrent">
+                      <a href="#">Физические лица</a>
+                    </div>
+                    <div class="headertop__link current">
+                      <a href="#" class="active current">Юридические лица</a>
+                    </div>
+                    <div class="headertop__link notcurrent">
+                      <a href="#">Корпоративные клиенты</a>
+                    </div>
+                    <div class="headertop__dropdown">
+                      <div class=" visible">
+                        <a href="/">Физические лица</a>
+                      </div>
+                      <div class=" visible">
+                        <a href="/servicescredit/">Корпоративные клиенты</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.headerrow -->
+            </div>
+            <div class="headermain__item headermain__item_right">
+              <div class="mobilepanel">
+                <div class="headercenter__search">
+                  <div class="searchbutton searchbutton_mobile">
+                    <img src="/images/mobilesearch.svg" alt="">
+                  </div>
+                </div>
+                <div class="headerright">
+                  <div class="lklink lklink_mobile">
+                    <a href="https://person.nbki.ru/login?utm_source=fl&amp;utm_medium=mainpage&amp;utm_campaign=button&amp;utm_term=lk"
+                      onclick="ym('9726127','reachGoal', 'lk_click'); return true;">
+                      <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8.5" cy="4.5" r="3.5" stroke="#AEB5D1" stroke-width="2"></circle>
+                        <path d="M16 18C16 14.134 12.6421 11 8.5 11C4.35786 11 1 14.134 1 18" stroke="#AEB5D1"
+                          stroke-width="2" stroke-linecap="round"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="burgermenu burgermenu_mobile">
+                  <button class="headermain__menu js-menu js-menu_mobile">
+                    <svg class="burgermenu--open " width="18" height="16" viewBox="0 0 18 16" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 2H17" stroke="#AEB5D1" stroke-width="2" stroke-linecap="round"></path>
+                      <path d="M1 8H17" stroke="#AEB5D1" stroke-width="2" stroke-linecap="round"></path>
+                      <path d="M1 14H17" stroke="#AEB5D1" stroke-width="2" stroke-linecap="round"></path>
+                    </svg>
+                    <img src="/images/hamburger2.svg" alt="" class="burgermenu--close ">
+                  </button>
+                </div>
+              </div>
+              <div class="headercenter">
+                <div class="headercenter__menu">
+                  <div class="headermenu">
+                    <ul>
+                      <li>
+                        <a href="/">Главная</a>
+                      </li>
+                      <li>
+                        <a href="/company/">О бюро</a>
+                      </li>
+                      <li>
+                        <a href="/contacts/">Контакты</a>
+                      </li>
+                      <li class='onlyDesktop'>
+                        <a href="#" class='btn btn_main'>Подключиться к&nbsp;НБКИ</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="headercenter__search">
+                  <div class="searchbutton searchbutton_desktop">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="9.5" cy="9.5" r="7" stroke="#000"></circle>
+                      <path
+                        d="M20.2927 21.2929C20.6833 21.6834 21.3164 21.6834 21.707 21.2929C22.0975 20.9024 22.0975 20.2692 21.707 19.8787L20.2927 21.2929ZM14.207 15.2071L20.2927 21.2929L21.707 19.8787L15.6212 13.7929L14.207 15.2071Z"
+                        fill="#000"></path>
+                    </svg>
+                  </div>
+                </div>
+                <span class="mobilemenubtn">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="5" y1="6" x2="19" y2="6" stroke="#C2BFCC" stroke-width="2" stroke-linecap="round"></line>
+                    <line x1="5" y1="12" x2="19" y2="12" stroke="#C2BFCC" stroke-width="2" stroke-linecap="round">
+                    </line>
+                    <line x1="5" y1="18" x2="19" y2="18" stroke="#C2BFCC" stroke-width="2" stroke-linecap="round">
+                    </line>
+                  </svg>
+                </span>
+              </div>
+              <div class="headerright">
+                <div class="lklink lklink_desktop">
+                  <a href="https://person.nbki.ru/login?utm_source=fl&amp;utm_medium=mainpage&amp;utm_campaign=button&amp;utm_term=lk
+                    " onclick="ym('9726127','reachGoal', 'lk_click'); return true;">
+                    <span>Войти</span>
+                    <img src="/images/hlogin.svg" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="search__full" itemscope="" itemtype="https://schema.org/WebSite">
+          <meta itemprop="url" content="https://nbki.ru/">
+          <form action="/search/" itemprop="potentialAction" itemscope="" itemtype="https://schema.org/SearchAction">
+            <div class="search__items">
+              <meta itemprop="target" content="https://nbki.ru/search/?q={q}">
+              <input itemprop="query-input" class="search__input" type="text" name="q" placeholder="Что вы ищете?">
+              <div class="search__buttons">
+                <button class="search__submit btn_main" type="submit">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="9.5" cy="9.5" r="7" stroke="#fff"></circle>
+                    <path
+                      d="M20.2927 21.2929C20.6833 21.6834 21.3164 21.6834 21.707 21.2929C22.0975 20.9024 22.0975 20.2692 21.707 19.8787L20.2927 21.2929ZM14.207 15.2071L20.2927 21.2929L21.707 19.8787L15.6212 13.7929L14.207 15.2071Z"
+                      fill="#fff"></path>
+                  </svg>
+                  <span>Найти</span>
+                </button>
+                <span class="search__button_close search__button_open">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 15L15 1" stroke="#C2BFCC" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M1 1L15 15" stroke="#C2BFCC" stroke-width="2" stroke-linecap="round"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="mainmenu">
+      <div class="container">
+        <div class="mainmenu__content mainmenu__content--desktop">
+          <div class="mainmenu__main mainmenu__cols">
+            <div class="mainmenu__cols ">
+              <div class="mainmenu__col">
+                <div class="mainmenu__menu">
+                  <div class="mainmenu__title">
+                    <a>Услуги физическим лицам</a>
+                  </div>
+                  <div class="mainmenu__list">
+                    <ul itemscope="" itemtype="http://www.schema.org/SiteNavigationElement" class="allmenu__lvl1">
+                      <li itemprop="name">
+                        <a itemprop="url" href="/pkr/">Узнать кредитный рейтинг</a>
+                      </li>
+                      <li itemprop="name">
+                        <a href="/nbki-history/">Получить кредитную историю</a>
+                      </li>
+                      <li itemprop="name">
+                        <a itemprop="url" href="/spor/">Оспорить кредитную историю</a>
+                      </li>
+                      <li itemprop="name">
+                        <a itemprop="url" href="/historylist/">Справка из&nbsp;ЦККИ</a>
+                      </li>
+                      <li itemprop="name">
+                        <a href="/code/">Действия с&nbsp;кодом субъекта</a>
+                      </li>
+                      <li itemprop="name">
+                        <a href="/zashchita-ot-moshennichestva/">Защита от мошенничества</a>
+                      </li>
+                      <li itemprop="name">
+                        <a href="/podpiska-na-credithistory/">Подписка на&nbsp;кредитную историю</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="mainmenu__col">
+                <div class="mainmenu__menu">
+                  <div class="mainmenu__title">
+                    <a>Услуги юридическим лицам</a>
+                  </div>
+                  <div class="mainmenu__list">
+                    <ul itemscope="" itemtype="http://www.schema.org/SiteNavigationElement">
+                      <li itemprop="name">
+                        <a itemprop="url" href="/judicial/svedeniya/">Получить кредитную историю</a>
+                      </li>
+                      <li itemprop="name">
+                        <a itemprop="url" href="/judicial/spor/">Оспорить кредитную историю</a>
+                      </li>
+                      <li itemprop="name">
+                        <a itemprop="url" href="/judicial/historylist/">Справка из&nbsp;ЦККИ</a>
+                      </li>
+                      <li itemprop="name">
+                        <a itemprop="url" href="/judicial/code/">Действия с&nbsp;кодом субъекта</a>
+                      </li>
+                      <li itemprop="name">
+                        <a itemprop="url" href="/uslugi-dlya-finansovykh-upravlyayushchikh/">Финансовым управляющим</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="mainmenu__col">
+                <div class="mainmenu__menu">
+                  <div class="mainmenu__title">
+                    <a>Информация</a>
+                  </div>
+                  <div class="mainmenu__list">
+                    <ul itemscope="" itemtype="http://www.schema.org/SiteNavigationElement">
+                      <li itemprop="name">
+                        <a itemprop="url" href="/contacts/">Контакты</a>
+                      </li>
+                      <li itemprop="name">
+                        <a itemprop="url" href="/company/news/">Новости</a>
+                      </li>
+                      <li itemprop="name">
+                        <a itemprop="url" href="/press/pressabout/">Пресса о&nbsp;нас</a>
+                      </li>
+                      <li itemprop="name">
+                        <a itemprop="url" href="/faq/">Вопросы и&nbsp;ответы</a>
+                      </li>
+                      <li itemprop="name">
+                        <a itemprop="url" href="/poleznaya-informatsiya/">Полезная информация</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="mainmenu__col">
+                <div class="mainmenu__menu">
+                  <div class="mainmenu__title">
+                    <a>Корпоративным клиентам</a>
+                  </div>
+                  <div class="mainmenu__list">
+                    <ul itemscope="" itemtype="http://www.schema.org/SiteNavigationElement">
+                      <li></li>
+                      <li itemprop="name">
+                        <a itemprop="url" href="/servicescredit/">Подробная информация</a>
+                      </li>
+                      <li itemprop="name">
+                        <a itemprop="url" href="/i-want-to-become-a-client/form/">Стать клиентом НБКИ</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- /.mainmenu__col -->
+              <div class="mainmenu__col">
+                <div class="mainmenu__menu">
+                  <div class="mainmenu__title">
+                    <a>О бюро</a>
+                  </div>
+                  <div class="mainmenu__list">
+                    <ul itemscope="" itemtype="http://www.schema.org/SiteNavigationElement" class="allmenu__lvl1">
+                      <li itemprop="name">
+                        <a itemprop="url" href="/company/">О бюро</a>
+                      </li>
+                      <li itemprop="name">
+                        <a itemprop="url" href="/company/documents/">Документы НБКИ</a>
+                      </li>
+                      <li itemprop="name">
+                        <a itemprop="url" href="/company/rekvizit/">Реквизиты</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mainmenu__footer mainmenu__cols">
+            <div class="mainmenu__links">
+              <div class="mainmenu__title">
+                <a href="/privacy_rules/">Пользовательское соглашение</a>
+              </div>
+              <div class="mainmenu__title">
+                <a href="https://person.nbki.ru/login" rel="nofollow">Вход в&nbsp;личный кабинет</a>
+              </div>
+              <div class="mainmenu__title">
+                <a href="/application/">Мобильное приложение</a>
+              </div>
+            </div>
+            <!-- /.mainmenu__links -->
+            <div class="mainmenu__phones">
+              <div class="phone">
+                <span>Наш телефон в&nbsp;Москве:</span>
+                <a href="tel:84952217837">8 (495) 221-78-37</a>
+              </div>
+              <div class="phone">
+                <span>Бесплатный звонок:</span>
+                <a href="tel:88006006404">8 (800) 600-64-04</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mainmenu__content mainmenu__content--mobile mainmenumob">
+          <div class="accordmenu">
+            <div class="accordmenu__title js-accord">
+              <span>Услуги</span>
+            </div>
+            <div class="accordmenu__content">
+              <ul>
+                <li>
+                  <a href="/serviceszaem/pkr/">Узнать кредитный рейтинг</a>
+                </li>
+                <li>
+                  <a href="/nbki-history/">Получить кредитную историю</a>
+                </li>
+                <li>
+                  <a href="/serviceszaem/spor/">Оспорить кредитную историю</a>
+                </li>
+                <li>
+                  <a href="/serviceszaem/historylist/">Справка из&nbsp;ЦККИ</a>
+                </li>
+                <li>
+                  <a href="/serviceszaem/code/">Действия с&nbsp;кодом субъекта</a>
+                </li>
+                <li>
+                  <a href="/zashchita-ot-moshennichestva/">Защита от мошенничества</a>
+                </li>
+                <li>
+                  <a href="/podpiska-na-credithistory/">Подписка на&nbsp;кредитную историю</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /.accordmenu -->
+          <div class="accordmenu">
+            <div class="accordmenu__title js-accord">
+              <span>О компании</span>
+            </div>
+            <div class="accordmenu__content">
+              <ul class="allmenu__lvl1">
+                <li>
+                  <a href="/company/">О бюро</a>
+                </li>
+                <li>
+                  <a href="/company/documents/">Документы НБКИ</a>
+                </li>
+                <li>
+                  <a href="/company/rekvizit/">Реквизиты</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /.accordmenu -->
+          <div class="accordmenu">
+            <div class="accordmenu__title js-accord">
+              <span>Информация</span>
+            </div>
+            <div class="accordmenu__content">
+              <ul>
+                <li>
+                  <a href="/contacts/">Контакты</a>
+                </li>
+                <li>
+                  <a href="/company/news/">Новости</a>
+                </li>
+                <li>
+                  <a href="/press/pressabout/">Пресса о&nbsp;нас</a>
+                </li>
+                <li>
+                  <a href="/faq/">Вопросы и&nbsp;ответы</a>
+                </li>
+                <li>
+                  <a href="/poleznaya-informatsiya/">Полезная информация</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /.accordmenu -->
+          <div class="accordmenu">
+            <div class="accordmenu__title">
+              <a href="//story.nbki.ru" target="_blank">Истории о&nbsp;кредитах</a>
+            </div>
+          </div>
+          <!-- /.accordmenu -->
+          <div class="mainmenu__phones ">
+            <div class="phone">
+              <span>Наш телефон в&nbsp;Москве:</span>
+              <a href="tel:84952217837">8 (495) 221-78-37</a>
+            </div>
+            <div class="phone">
+              <span>Бесплатный звонок:</span>
+              <a href="tel:88006006404">8 (800) 600-64-04</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mobilemenu">
+        <span class="mobilemenuclose">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 15L15 1" stroke="#C2BFCC" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M1 1L15 15" stroke="#C2BFCC" stroke-width="2" stroke-linecap="round"></path>
+          </svg>
+        </span>
+        <div class="mobilemenu__wrapper">
+          <div class="mobilemenu__menu">
+            <ul>
+              <li class="mobilemenu__parent">О компании</li>
+              <li class="mobilemenu__parent">Информация</li>
+              <li class="mobilemenu__parent">Услуги</li>
+              <li class="mobilemenu__notparent">
+                <a href="/contacts/">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mobilemenu__item">
+            <span class="mobilemenuclose">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 15L15 1" stroke="#C2BFCC" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M1 1L15 15" stroke="#C2BFCC" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+            </span>
+            <div class="mobilemenu__title">
+              <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 8L1 4.49999L4.99992 1" stroke="#7B7794" stroke-linecap="round"></path>
+              </svg>
+              <span>О компании</span>
+            </div>
+            <div class="mobilemenu__menu" itemscope="" itemtype="http://www.schema.org/SiteNavigationElement">
+              <div class="mainmenu__title mainmenu__title_nochild">
+                <a href="/company/">О бюро</a>
+              </div>
+              <div class="mainmenu__title mainmenu__title_nochild" itemprop="name">
+                <a itemprop="url" href="/company/documents/">Документы НБКИ</a>
+              </div>
+              <div class="mainmenu__title mainmenu__title_nochild" itemprop="name">
+                <a itemprop="url" href="/company/rekvizit/">Реквизиты</a>
+              </div>
+              <div class="mainmenu__title mainmenu__title_nochild">
+                <a href="/privacy_rules/">Политика конфиденциальности</a>
+              </div>
+            </div>
+          </div>
+          <div class="mobilemenu__item">
+            <span class="mobilemenuclose">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 15L15 1" stroke="#C2BFCC" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M1 1L15 15" stroke="#C2BFCC" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+            </span>
+            <div class="mobilemenu__title">
+              <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 8L1 4.49999L4.99992 1" stroke="#7B7794" stroke-linecap="round"></path>
+              </svg>
+              <span>Информация</span>
+            </div>
+            <div class="mobilemenu__menu" itemscope="" itemtype="http://www.schema.org/SiteNavigationElement">
+              <div class="mainmenu__title mainmenu__title_nochild" itemprop="name">
+                <a itemprop="url" href="/company/news/">Новости</a>
+              </div>
+              <div class="mainmenu__title mainmenu__title_nochild" itemprop="name">
+                <a itemprop="url" href="/press/pressabout/">Пресса о&nbsp;нас</a>
+              </div>
+              <div class="mainmenu__title mainmenu__title_nochild" itemprop="name">
+                <a itemprop="url" href="/faq/">Вопросы и&nbsp;ответы</a>
+              </div>
+              <div class="mainmenu__title mainmenu__title_nochild" itemprop="name">
+                <a itemprop="url" href="https://story.nbki.ru/">Истории о&nbsp;кредитах</a>
+              </div>
+              <div class="mainmenu__title mainmenu__title_nochild">
+                <a href="/privacy_rules/">Пользовательское соглашение</a>
+              </div>
+              <div class="mainmenu__title mainmenu__title_nochild">
+                <a href="">Карта сайта</a>
+              </div>
+              <div class="mainmenu__title mainmenu__title_nochild" itemprop="name">
+                <a itemprop="url" href="/contacts/">Контакты</a>
+              </div>
+            </div>
+          </div>
+          <div class="mobilemenu__item">
+            <span class="mobilemenuclose">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 15L15 1" stroke="#C2BFCC" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M1 1L15 15" stroke="#C2BFCC" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+            </span>
+            <div class="mobilemenu__title">
+              <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 8L1 4.49999L4.99992 1" stroke="#7B7794" stroke-linecap="round"></path>
+              </svg>
+              <span>Услуги</span>
+            </div>
+            <div class="mobilemenu__menu">
+              <div class="mainmenu__title">
+                <a href="">Услуги физическим лицам</a>
+              </div>
+              <div class="mainmenu__list">
+                <ul itemscope="" itemtype="http://www.schema.org/SiteNavigationElement">
+                  <li itemprop="name">
+                    <a itemprop="url" href="/serviceszaem/pkr/">Узнать кредитный рейтинг</a>
+                  </li>
+                  <li itemprop="name">
+                    <a itemprop="url" href="/nbki-history/">Получить кредитную историю</a>
+                  </li>
+                  <li itemprop="name">
+                    <a itemprop="url" href="/serviceszaem/spor/">Оспорить кредитную историю</a>
+                  </li>
+                  <li itemprop="name">
+                    <a itemprop="url" href="/serviceszaem/historylist/">Получить сведения из&nbsp;ЦККИ</a>
+                  </li>
+                  <li itemprop="name">
+                    <a itemprop="url" href="/serviceszaem/code/">Действия с&nbsp;кодом субъекта</a>
+                  </li>
+                  <li itemprop="name">
+                    <a itemprop="url" href="/zashchita-ot-moshennichestva/">Защита от мошенничества</a>
+                  </li>
+                  <li itemprop="name">
+                    <a itemprop="url" href="/podpiska-na-credithistory/">Подписка на&nbsp;кредитную историю</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="mobilemenu__menu">
+              <div class="mainmenu__title">
+                <a href="">Услуги юридическим лицам</a>
+              </div>
+              <div class="mainmenu__list">
+                <ul itemscope="" itemtype="http://www.schema.org/SiteNavigationElement">
+                  <li itemprop="name">
+                    <a itemprop="url" href="/serviceszaem/svedeniya/yuridicheskim-litsam/">Получить кредитную
+                      историю</a>
+                  </li>
+                  <li itemprop="name">
+                    <a itemprop="url" href="/serviceszaem/spor/juridical_person/">Оспорить кредитную историю</a>
+                  </li>
+                  <li itemprop="name">
+                    <a itemprop="url" href="/serviceszaem/historylist/juridical_person/">Получить сведения
+                      из&nbsp;ЦККИ</a>
+                  </li>
+                  <li itemprop="name">
+                    <a itemprop="url" href="/serviceszaem/code/juridical_person/">Действия с&nbsp;кодом субъекта</a>
+                  </li>
+                  <li itemprop="name">
+                    <a itemprop="url" href="/serviceszaem/uslugi-dlya-finansovykh-upravlyayushchikh/">Финансовым
+                      управляющим</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="mainmenu__menu">
+              <div class="mainmenu__title">
+                <a href="">Корпоративным клиентам</a>
+              </div>
+              <div class="mainmenu__list">
+                <ul itemscope="" itemtype="http://www.schema.org/SiteNavigationElement">
+                  <li itemprop="name">
+                    <a itemprop="url" href="/servicescredit/">Подробная информация</a>
+                  </li>
+                  <li itemprop="name">
+                    <a itemprop="url" href="/i-want-to-become-a-client/form/">Стать клиентом НБКИ</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="mobilemenu__links">
+            <a href="https://person.nbki.ru/login">Войти в&nbsp;личный кабинет</a>
+            <br>
+            <br>
+            <a href="/application/">Мобильное приложение</a>
+          </div>
+          <div class="mobilemenu__footer">
+            <div class="phones">
+              <div class="phone">
+                <span>Наш телефон в&nbsp;Москве:</span>
+                <a href="tel:84952217837">8 (495) 221-78-37</a>
+              </div>
+              <div class="phone">
+                <span>Бесплатный звонок:</span>
+                <a href="tel:88006006404">8 (800) 600-64-04</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.container -->
+    </div>
+  </header>
+  <main>
+    <div class="page page_white  corppage_v4 nbki_v4">
+      <div class="container">
+        <div class="pagecontent calcpage">
+          <div class="nbki_v4 wrapperwhite">
+            <div class="pagetitle  ">
+              <h1>Кредитный калькулятор НБКИ</h1>
+              <div class="calcform">
+                <form action="">
+                  <div class="calcform__block">
+                    <div class="calcform__row">
+                      <div class="calcform__col">
+                        <div class="calcform__item">
+                          <div class="calcform__input">
+                            <label class="form__label" for="calc_summ">
+                              <div class="form-control__wrapper range-slider" data-range-slider-type="calc_summ">
+                                <input id="calc_summ" type="text" data-stepdata="calc_summ" data-steptype="source"
+                                  class="form-control range-slider__control" data-max="10000000" data-min="1000"
+                                  data-summ-format="" name="calc_summ" type="text" inputmode="decimal" value="1000">
+                                <div class="range-slider__ui"></div>
+                                <span class="placeholder">Выберите сумму кредита, руб</span>
+
+                              </div>
+                            </label>
+
+                          </div><!-- /.calcform__input -->
+                          <div class="calcform__slider"></div><!-- /.calcform__slider -->
+                        </div><!-- /.calcform__item -->
+                      </div><!-- /.calcform__col -->
+                    </div><!-- /.calcform__row -->
+                  </div><!-- /.calcform__block -->
+                </form>
+              </div><!-- /.calcform -->
+            </div>
+          </div><!-- /.nbki_v4 wrapperwhite -->
+        </div>
+      </div>
+    </div>
+    </footer>
+    <div class="s-overlay"></div>
+    <!-- Модальные окно - Оплата -->
+    <div id="modal_pay" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <span class="modalclose" data-dismiss="modal" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 15L15 1" stroke="#C2BFCC" stroke-width="2" stroke-linecap="round"></path>
+              <path d="M1 1L15 15" stroke="#C2BFCC" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+          </span>
+          <div class="modal-body">
+            <div class="modal-title">Онлайн оплата услуги</div>
+            <div class="modal__text">
+              <p>
+                <span style="color: #FF0029">Внимание!</span> Первый и&nbsp;второй (за 12 месяцев) кредитный отчет
+                оплачивать не&nbsp;нужно.
+              </p>
+              <p>После оплаты кредитная история не&nbsp;будет отправлена, после оплаты необходимо направить запрос,
+                смотри
+                пункты выше</p>
+            </div>
+            <div class="modal__info">Стоимость услуги</div>
+            <div class="modal__price">699 ₽</div>
+            <div class="modal__content formblock">
+              <form>
+                <div class="modal__inputs formblock__inputs">
+                  <div class="modal__input formblock__input">
+                    <input type="text" class="forminput" name="" placeholder="Фамилия">
+                  </div>
+                  <div class="modal__input formblock__input">
+                    <input type="text" class="forminput" name="" placeholder="Имя">
+                  </div>
+                  <div class="modal__input formblock__input">
+                    <input type="text" class="forminput" name="" placeholder="Отчество">
+                  </div>
+                  <div class="modal__input formblock__input">
+                    <input type="tel" class="forminput" name="" placeholder="Мобильный телефон">
+                  </div>
+                  <div class="modal__input formblock__input">
+                    <input type="email" class="forminput" name="" placeholder="Электронная почта">
+                  </div>
+                </div>
+                <div class="check-block">
+                  <input type="checkbox" id="checkbox_confirm">
+                  <label for="checkbox_confirm">Оплачивая услугу вы соглашаетесь с&nbsp; <a href=""
+                      class="link_blue">Политикой в&nbsp;области обработки и&nbsp;защиты персональных данных АО
+                      «НБКИ»</a>
+                  </label>
+                </div>
+                <div class="formblock__buttons">
+                  <button type="submit" class="btn_main btn_main_default">Оплатить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script src="js/maskedinput.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/jQuery.inputSliderRange.min.js"></script>
+    <script type="text/javascript" src="js/nouislider.min.js"></script>
+    <script type="text/javascript" src="js/jquery.inputmask.min.js"></script>
+    <script type="text/javascript" src="js/calc.js"></script>
+</body>
+
+</html>
