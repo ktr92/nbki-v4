@@ -4,10 +4,15 @@
   font-weight: 500;
   line-height: 40px; /* 117.647% */
   letter-spacing: -0.68px;
+  margin-bottom: 15px;
+}
+.page_calc {
+  padding-top: 64px;
 }
 
 .calcpage .nbki_v4.wrapperwhite {
   padding: 32px;
+  margin: 0;
 }
 
 .calcform__input {
@@ -47,10 +52,15 @@
 .calcform__input input {
   padding: 15px;
   border-radius: 10px;
-  border: 1px solid var(--Gray-Border, #cecfda);
+  border: 1px solid var(--Gray-Border, #aeb5d1);
   background: #fff;
   display: block;
   width: 100%;
+  height: unset;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
 }
 .calcform__input label {
   display: block;
@@ -107,7 +117,7 @@
   height: 1px;
   border-radius: 0;
   border: none;
-  border-radius: 2px;
+  border-radius: 10px;
 }
 .noUi-connects {
   overflow: visible;
@@ -125,8 +135,204 @@
   position: absolute;
   left: 0;
   top: -1px;
+  border-radius: 10px;
+  overflow: hidden;
   background: #4563ff;
 }
 .range-slider__ui {
   margin: 20px 0;
+}
+
+.calcform__limit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calclimit {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #7b7794;
+}
+
+.calcform__block .form-control {
+  height: unset;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.calcform__block {
+  padding-bottom: 26px;
+  margin-bottom: 26px;
+  border-bottom: 1px solid rgba(10, 0, 51, 0.1);
+}
+/* html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
+  right: 7px;
+} */
+.datepicker-panel > ul {
+  /*   margin-left: -5px;
+  margin-right: -5px; */
+}
+.datepicker-panel > ul > li {
+  width: 22px;
+  margin: 0 5px;
+  height: 22px;
+  line-height: 22px;
+  margin-bottom: 9px;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  color: #000;
+}
+.datepicker-panel > ul {
+  width: 100%;
+}
+.datepicker-panel > ul > li.picked,
+.datepicker-panel > ul > li.picked:hover {
+  color: #4563ff;
+  background: #eceef6;
+}
+.datepicker-panel > ul > li[data-view="month next"],
+.datepicker-panel > ul > li[data-view="month prev"] {
+  color: #4563ff;
+  font-size: 20px;
+  font-weight: 500;
+  height: unset;
+  display: flex;
+  justify-content: center;
+  width: unset;
+}
+.datepicker-panel > ul > li[data-view="month current"] {
+  color: #000;
+  text-align: center;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+}
+.datepicker-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.datepicker-panel > ul > li[data-view="month current"],
+.datepicker-panel > ul > li[data-view="year current"],
+.datepicker-panel > ul > li[data-view="years current"] {
+  width: 100px;
+  padding: 0 8px;
+}
+.datepicker-top-left:after,
+.datepicker-top-right:after,
+.datepicker-top-left:before,
+.datepicker-top-right:before {
+  display: none;
+}
+.datepicker-top-left,
+.datepicker-top-right {
+  border: none;
+}
+.datepicker-container {
+  width: 250px;
+  padding: 10px;
+  max-width: 250px;
+  box-sizing: border-box;
+  border-radius: 0px 0px 10px 10px;
+  border: 1px solid #aeb5d1;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(115, 100, 178, 0.1);
+  transform: translateY(-11px);
+}
+input[data-toggle="datepicker"]:active,
+input[data-toggle="datepicker"]:focus {
+  border-radius: 10px 10px 0 0;
+}
+.datepicker-panel > ul[data-view="week"] > li:nth-child(6) {
+  color: #4563ff !important;
+}
+.datepicker-panel > ul[data-view="week"] > li:nth-child(7) {
+  color: #4563ff !important;
+}
+.datepicker-panel > ul > li:nth-child(7n),
+.datepicker-panel > ul > li:nth-child(7n - 1) {
+  color: #4563ff !important;
+}
+
+.calcform__select {
+  width: 100%;
+  position: relative;
+}
+
+.calcform__select select {
+  display: none;
+}
+
+.calcform__select .calcform__select-selected {
+}
+
+.calcform__select .calcform__select-item {
+  cursor: pointer;
+  padding: 12px 14px;
+}
+
+.calcform__select .calcform__select-item:hover {
+}
+
+.calcform__select .calcform__select-all {
+  position: absolute;
+  top: 100%;
+  transform: translateY(-10px);
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: #fff;
+  border: 1px solid #aeb5d1;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+
+.calcform__select .all-items-hide {
+  display: none;
+}
+
+.expand_more {
+  background-image: url(/images/expand_more.svg);
+  background-position: center right 14px;
+  background-repeat: no-repeat;
+}
+.calcform__select .calcform__select-selected {
+  background-image: url(/images/expand_more.svg);
+  background-position: center right 14px;
+  background-repeat: no-repeat;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--Gray-Border, #aeb5d1);
+  background: #fff;
+  display: block;
+  width: 100%;
+  height: unset;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: #000;
+  font-family: Formular;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  cursor: pointer;
+}
+.calcform__item_select .calcform__input {
+  position: relative;
+}
+.calcform__item_select .placeholder {
+  top: 0;
+}
+
+.calcform__item {
+  margin-bottom: 26px;
+}
+.calcform__select .calcform__select-all {
 }

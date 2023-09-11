@@ -3,7 +3,9 @@ var rangeTimeout
 function rangeSliderCreate(slideIndex, slide) {
   var rangeSliderOptions
   var rangeSliderType = $(slide).attr("data-range-slider-type")
-  var rangeSliderStart = parseFloat($(slide).find(".form-control").val())
+  var rangeSliderStart = parseFloat(
+    $(slide).find(".form-control").val().replace(/\s/g, "")
+  )
   var rangeSliderMin = parseFloat(
     $(slide).closest(".range-slider").find(".form-control").data("min")
   )
@@ -16,8 +18,9 @@ function rangeSliderCreate(slideIndex, slide) {
       start: [rangeSliderStart],
       range: {
         min: [rangeSliderMin, 1],
-        "30%": [100000, 1000],
-        "70%": [1000000, 10000],
+        "20%": [100000, 1000],
+        "30%": [500000, 5000],
+        "50%": [5000000, 10000],
         max: [rangeSliderMax],
       },
       connect: "lower",
@@ -64,7 +67,7 @@ function rangeSliderCreate(slideIndex, slide) {
     }
   } else {
     rangeSliderOptions = {
-      start: [1],
+      start: [rangeSliderStart],
       range: {
         min: [rangeSliderMin],
         max: [rangeSliderMax],
@@ -85,10 +88,11 @@ function rangeSliderCreate(slideIndex, slide) {
   rangeSlidersItem.on("slide", function (values, handle) {
     clearTimeout(rangeTimeout)
     if (
-      rangeSliderType === "calc_summ" ||
+      1
+      /*   rangeSliderType === "calc_summ" ||
       rangeSliderType === "size" ||
       rangeSliderType === "height" ||
-      rangeSliderType === "count"
+      rangeSliderType === "count"  */
     ) {
       $(this.target)
         .closest(".range-slider")
@@ -142,8 +146,9 @@ function rangeSliderInit(rangeSliders) {
     }
 
     if (
-      $(this).closest(".range-slider").attr("data-range-slider-type") ===
-      "calc_summ"
+      1
+      /*  $(this).closest(".range-slider").attr("data-range-slider-type") ===
+      "calc_summ" */
     ) {
       if (
         this.value.replace(/[^0-9]/g, "") >
@@ -161,24 +166,25 @@ function rangeSliderInit(rangeSliders) {
         .next()
         .data("slider")
         .set(parseInt(this.value.replace(/[^0-9]/g, "")))
-
-      if (
-        parseInt(
-          $('[name="max_calc_summ"]')
-            .val()
-            .replace(/[^0-9]/g, "")
-        ) >
-        parseInt(
+      if (0) {
+        if (
+          parseInt(
+            $('[name="max"]')
+              .val()
+              .replace(/[^0-9]/g, "")
+          ) >
+          parseInt(
+            $('[name="calc_summ"]')
+              .val()
+              .replace(/[^0-9]/g, "")
+          )
+        ) {
+          $('[name="calc_summ"]').val($('[name="max"]').val())
           $('[name="calc_summ"]')
-            .val()
-            .replace(/[^0-9]/g, "")
-        )
-      ) {
-        $('[name="calc_summ"]').val($('[name="max_calc_summ"]').val())
-        $('[name="calc_summ"]')
-          .next()
-          .data("slider")
-          .set(parseInt(this.value.replace(/[^0-9]/g, "")))
+            .next()
+            .data("slider")
+            .set(parseInt(this.value.replace(/[^0-9]/g, "")))
+        }
       }
     } else if (
       $(this).closest(".range-slider").attr("data-range-slider-type") ===
@@ -227,9 +233,202 @@ $(document).ready(function () {
     showMaskOnFocus: false,
     rightAlign: false,
   })
+  $("[data-rate-format]").inputmask({
+    mask: "( 999){+|1} %",
+    numericInput: true,
+    showMaskOnHover: false,
+    showMaskOnFocus: false,
+    rightAlign: false,
+  })
+  $("[data-number-format]").inputmask({
+    mask: "( 999){+|1}",
+    numericInput: true,
+    showMaskOnHover: false,
+    showMaskOnFocus: false,
+    rightAlign: false,
+  })
 
   if ($(".range-slider").length) {
     var rangeSliders = $(".range-slider")
     rangeSliderInit(rangeSliders)
   }
+
+  $('[data-toggle="datepicker"]').datepicker({
+    // options here
+    autoHide: true,
+    autoPick: true,
+    format: "dd.mm.yyyy",
+    language: "ru-Ru",
+    date: Date.now(),
+    weekStart: 1,
+    days: [
+      "Воскресенье",
+      "Понедельник",
+      "Вторник",
+      "Среда",
+      "Четверг",
+      "Пятница",
+      "Суббота",
+    ],
+    daysShort: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+    daysMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+    months: [
+      "Январь",
+      "Февраль",
+      "Март",
+      "Апрель",
+      "Май",
+      "Июнь",
+      "Июль",
+      "Август",
+      "Сентябрь",
+      "Октябрь",
+      "Ноябрь",
+      "Декабрь",
+    ],
+    monthsShort: [
+      "Янв",
+      "Фер",
+      "Мар",
+      "Апр",
+      "Май",
+      "Июн",
+      "Июл",
+      "Авг",
+      "Сен",
+      "Окт",
+      "Ноя",
+      "Дек",
+    ],
+
+    mutedClass: "muted",
+    pickedClass: "picked",
+    disabledClass: "disabled",
+    highlightedClass: "highlighted",
+    template:
+      '<div class="datepicker-container">' +
+      '<div class="datepicker-panel" data-view="years picker">' +
+      "<ul>" +
+      '<li data-view="years prev">&lsaquo;</li>' +
+      '<li data-view="years current"></li>' +
+      '<li data-view="years next">&rsaquo;</li>' +
+      "</ul>" +
+      '<ul data-view="years"></ul>' +
+      "</div>" +
+      '<div class="datepicker-panel" data-view="months picker">' +
+      "<ul>" +
+      '<li data-view="year prev">&lsaquo;</li>' +
+      '<li data-view="year current"></li>' +
+      '<li data-view="year next">&rsaquo;</li>' +
+      "</ul>" +
+      '<ul data-view="months"></ul>' +
+      "</div>" +
+      '<div class="datepicker-panel" data-view="days picker">' +
+      "<ul>" +
+      '<li data-view="month prev">&lsaquo;</li>' +
+      '<li data-view="month current"></li>' +
+      '<li data-view="month next">&rsaquo;</li>' +
+      "</ul>" +
+      '<ul data-view="week"></ul>' +
+      '<ul data-view="days"></ul>' +
+      "</div>" +
+      "</div>",
+    template:
+      '<div class="datepicker-container">' +
+      '<div class="datepicker-panel" data-view="years picker">' +
+      '<ul class="datepicker-nav">' +
+      '<li data-view="month prev">&lsaquo;</li>' +
+      '<li data-view="month current"></li>' +
+      '<li data-view="month next">&rsaquo;</li>' +
+      "</ul>" +
+      '<ul data-view="years"></ul>' +
+      "</div>" +
+      '<div class="datepicker-panel" data-view="months picker">' +
+      '<ul class="datepicker-nav">' +
+      '<li data-view="month prev">&lsaquo;</li>' +
+      '<li data-view="month current"></li>' +
+      '<li data-view="month next">&rsaquo;</li>' +
+      "</ul>" +
+      '<ul data-view="months"></ul>' +
+      "</div>" +
+      '<div class="datepicker-panel" data-view="days picker">' +
+      '<ul class="datepicker-nav">' +
+      '<li data-view="month prev">&lsaquo;</li>' +
+      '<li data-view="month current"></li>' +
+      '<li data-view="month next">&rsaquo;</li>' +
+      "</ul>" +
+      '<ul data-view="week"></ul>' +
+      '<ul data-view="days"></ul>' +
+      "</div>" +
+      "</div>",
+    /*  startDate: Date.now(), */
+  })
+})
+
+$(document).ready(function () {
+  var customSelect = $(".calcform__select")
+
+  customSelect.each(function () {
+    var thisCustomSelect = $(this),
+      options = thisCustomSelect.find("option"),
+      firstOptionText = options.first().text()
+
+    var selectedItem = $("<div></div>", {
+      class: "calcform__select-selected",
+    })
+      .appendTo(thisCustomSelect)
+      .text(firstOptionText)
+
+    var allItems = $("<div></div>", {
+      class: "calcform__select-all all-items-hide",
+    }).appendTo(thisCustomSelect)
+
+    options.each(function () {
+      var that = $(this),
+        optionText = that.text()
+
+      var item = $("<div></div>", {
+        class: "calcform__select-item",
+        on: {
+          click: function () {
+            var selectedOptionText = that.text()
+            selectedItem.text(selectedOptionText).removeClass("arrowanim")
+            allItems.addClass("all-items-hide")
+          },
+        },
+      })
+        .appendTo(allItems)
+        .text(optionText)
+    })
+  })
+
+  var selectedItem = $(".calcform__select-selected"),
+    allItems = $(".calcform__select-all")
+
+  selectedItem.on("click", function (e) {
+    var currentSelectedItem = $(this),
+      currentAllItems = currentSelectedItem.next(".calcform__select-all")
+
+    allItems.not(currentAllItems).addClass("all-items-hide")
+    selectedItem.not(currentSelectedItem).removeClass("arrowanim")
+
+    currentAllItems.toggleClass("all-items-hide")
+    currentSelectedItem.toggleClass("arrowanim")
+
+    e.stopPropagation()
+  })
+
+  $(document).on("click", function () {
+    var opened = $(".calcform__select-all:not(.all-items-hide)"),
+      index = opened.parent().index()
+
+    customSelect
+      .eq(index)
+      .find(".calcform__select-all")
+      .addClass("all-items-hide")
+    customSelect
+      .eq(index)
+      .find(".calcform__select-selected")
+      .removeClass("arrowanim")
+  })
 })

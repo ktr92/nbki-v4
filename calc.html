@@ -18,6 +18,7 @@
   <link rel="stylesheet" type="text/css" href="css/template_styles.css">
   <link rel="stylesheet" type="text/css" href="css/jQuery.inputSliderRange.css">
   <link rel="stylesheet" type="text/css" href="css/nouislider.min.css">
+  <link rel="stylesheet" type="text/css" href="css/datepicker.min.css">
   <link rel="stylesheet" type="text/css" href="css/corp.css">
   <link rel="stylesheet" type="text/css" href="css/calc.css">
   <!--[if lt IE 9]>
@@ -623,7 +624,7 @@
     </div>
   </header>
   <main>
-    <div class="page page_white  corppage_v4 nbki_v4">
+    <div class="page page_calc  nbki_v4">
       <div class="container">
         <div class="pagecontent calcpage">
           <div class="nbki_v4 wrapperwhite">
@@ -640,18 +641,99 @@
                               <div class="form-control__wrapper range-slider" data-range-slider-type="calc_summ">
                                 <input id="calc_summ" type="text" data-stepdata="calc_summ" data-steptype="source"
                                   class="form-control range-slider__control" data-max="10000000" data-min="1000"
-                                  data-summ-format="" name="calc_summ" type="text" inputmode="decimal" value="1000">
+                                  data-summ-format="" name="calc_summ" type="text" inputmode="decimal" value="5000000">
                                 <div class="range-slider__ui"></div>
                                 <span class="placeholder">Выберите сумму кредита, руб</span>
 
                               </div>
                             </label>
 
+                            <div class="calcform__limit">
+                              <div class="calclimit calclimit__min">1000 руб.</div>
+                              <div class="calclimit calclimit__right">10 млн руб.</div>
+
+                            </div><!-- /.calcaform__limit -->
+
+                          </div><!-- /.calcform__input -->
+                          <div class="calcform__slider"></div><!-- /.calcform__slider -->
+                        </div><!-- /.calcform__item -->
+                      </div><!-- /.calcform__col -->
+                      <div class="calcform__col">
+                        <div class="calcform__item">
+                          <div class="calcform__input">
+                            <label class="form__label" for="calc_creditTerm">
+                              <div class="form-control__wrapper range-slider" data-range-slider-type="calc_creditTerm">
+                                <input id="calc_creditTerm" type="text" data-stepdata="calc_creditTerm"
+                                  data-steptype="source" class="form-control range-slider__control" data-max="84"
+                                  data-min="1" data-number-format="" name="calc_creditTerm" type="text"
+                                  inputmode="decimal" value="42">
+                                <div class="range-slider__ui"></div>
+                                <span class="placeholder">Выберите срок кредита, мес.</span>
+
+                              </div>
+                            </label>
+
+                            <div class="calcform__limit">
+                              <div class="calclimit calclimit__min">1 мес.</div><!-- /.calclimit calclimit__min -->
+                              <div class="calclimit calclimit__right">84 мес.</div>
+                              <!-- /.calclimit calclimit__right -->
+                            </div><!-- /.calcaform__limit -->
+
+                          </div><!-- /.calcform__input -->
+                          <div class="calcform__slider"></div><!-- /.calcform__slider -->
+                        </div><!-- /.calcform__item -->
+                      </div><!-- /.calcform__col -->
+                      <div class="calcform__col">
+                        <div class="calcform__item">
+                          <div class="calcform__input">
+                            <label class="form__label" for="calc_creditRate">
+                              <div class="form-control__wrapper range-slider" data-range-slider-type="calc_creditRate">
+                                <input id="calc_creditRate" type="text" data-stepdata="calc_creditRate"
+                                  data-steptype="source" class="form-control range-slider__control" data-max="100"
+                                  data-min="0" data-rate-format="" name="calc_creditRate" type="text"
+                                  inputmode="decimal" value="50">
+                                <div class="range-slider__ui"></div>
+                                <span class="placeholder">Выберите ставку кредита, %</span>
+
+                              </div>
+                            </label>
+
+                            <div class="calcform__limit">
+                              <div class="calclimit calclimit__min">0%</div>
+                              <div class="calclimit calclimit__right">100%</div>
+                            </div><!-- /.calcaform__limit -->
+
                           </div><!-- /.calcform__input -->
                           <div class="calcform__slider"></div><!-- /.calcform__slider -->
                         </div><!-- /.calcform__item -->
                       </div><!-- /.calcform__col -->
                     </div><!-- /.calcform__row -->
+                  </div><!-- /.calcform__block -->
+                  <div class="calcform__block">
+                    <div class="calcform__content">
+                      <div class="calcform__main">
+                        <div class="calcform__item">
+                          <div class="calcform__input">
+                            <label for="">
+                              <input type="text" data-toggle="datepicker" class='expand_more'>
+                              <span class="placeholder">Дата выдачи</span>
+                            </label>
+                          </div><!-- /.calcform__input -->
+                        </div><!-- /.calcform__item -->
+                        <div class="calcform__item calcform__item_select">
+                          <div class="calcform__input">
+                            <div class="calcform__select">
+                              <select>
+                                <option value="0">Аннуитетный</option>
+                                <option value="1">Дифференцированный</option>
+                              </select>
+                            </div>
+                            <span class="placeholder">Тип платежа</span><!-- /.placeholder -->
+                          </div><!-- /.calcform__input -->
+                        </div><!-- /.calcform__item -->
+                      </div><!-- /.calcform__main -->
+                      <div class="calcform__aside"></div><!-- /.calcform__aside -->
+                    </div><!-- /.calcform__content -->
                   </div><!-- /.calcform__block -->
                 </form>
               </div><!-- /.calcform -->
@@ -730,6 +812,7 @@
     <script type="text/javascript" src="js/jQuery.inputSliderRange.min.js"></script>
     <script type="text/javascript" src="js/nouislider.min.js"></script>
     <script type="text/javascript" src="js/jquery.inputmask.min.js"></script>
+    <script type="text/javascript" src="js/datepicker.min.js"></script>
     <script type="text/javascript" src="js/calc.js"></script>
 </body>
 
