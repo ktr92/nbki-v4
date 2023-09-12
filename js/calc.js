@@ -391,6 +391,8 @@ $(document).ready(function () {
         class: "calcform__select-item",
         on: {
           click: function () {
+            $(".calcform__select-item").removeClass("active")
+            $(this).addClass("active")
             var selectedOptionText = that.text()
             selectedItem.text(selectedOptionText).removeClass("arrowanim")
             allItems.addClass("all-items-hide")
@@ -399,6 +401,10 @@ $(document).ready(function () {
       })
         .appendTo(allItems)
         .text(optionText)
+    })
+    $(".calcform__select").each((index, item) => {
+      console.log(item)
+      $(item).find(".calcform__select-item:first").addClass("active")
     })
   })
 

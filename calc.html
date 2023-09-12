@@ -709,8 +709,8 @@
                       </div><!-- /.calcform__col -->
                     </div><!-- /.calcform__row -->
                   </div><!-- /.calcform__block -->
-                  <div class="calcform__block">
-                    <div class="calcform__content">
+                  <div class="calcform__block calcform__block_border">
+                    <div class="calcform__content flex">
                       <div class="calcform__main">
                         <div class="calcform__item">
                           <div class="calcform__input">
@@ -731,9 +731,157 @@
                             <span class="placeholder">Тип платежа</span><!-- /.placeholder -->
                           </div><!-- /.calcform__input -->
                         </div><!-- /.calcform__item -->
+                        <div class="calcform__item">
+                          <div class="calcform__buttons flex">
+                            <div class="calcform__button">
+                              <button class='btn_main btn_calc'>
+                                Рассчитать
+                              </button>
+                            </div><!-- /.calcform__button -->
+                            <div class="calcform__button">
+                              <a href='#' class='btn_blborder btn_calc'>
+                                Скачать график платежей
+                              </a>
+                            </div><!-- /.calcform__button -->
+                          </div><!-- /.calcform__buttons -->
+                        </div><!-- /.calcform__item -->
+                        <div class="calcform__item">
+                          <div class="check-block check-block_big">
+                            <input type="checkbox" id="id_checkcalc">
+                            <label for="id_checkcalc">Я согласен на обработку и хранение персональных данных</label>
+                            <div class="error_text"></div>
+                          </div>
+                        </div><!-- /.calcform__item -->
                       </div><!-- /.calcform__main -->
-                      <div class="calcform__aside"></div><!-- /.calcform__aside -->
+                      <div class="calcform__aside">
+                        <div class="calcform__total">
+                          <div class="calctotal">
+                            <div class="calctotal__item">
+                              <div class="calctotal__title">Ежемесячный платеж</div><!-- /.calctotal__title -->
+                              <div class="calctotal__value">2 000</div><!-- /.calctotal__value -->
+                            </div><!-- /.calctotal__item -->
+                            <div class="calctotal__item">
+                              <div class="calctotal__title">Общая выплата</div><!-- /.calctotal__title -->
+                              <div class="calctotal__value">1 350 000</div><!-- /.calctotal__value -->
+                            </div><!-- /.calctotal__item -->
+                            <div class="calctotal__item calctotal__item_table">
+                              <div class="calctable">
+                                <table>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <span
+                                          class="calctable__color calctable__color-blue"></span><!-- /.calctable__color calctable__color-blue -->
+                                      </td>
+                                      <td>
+                                        <span class="calctable__title">Кредит</span><!-- /.calctable__title -->
+                                      </td>
+                                      <td>
+                                        <span class="calctable__value">1 000 000 руб.</span><!-- /.calctable__value -->
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <span
+                                          class="calctable__color calctable__color-red"></span><!-- /.calctable__color calctable__color-blue -->
+                                      </td>
+                                      <td>
+                                        <span class="calctable__title">Переплата</span><!-- /.calctable__title -->
+                                      </td>
+                                      <td>
+                                        <span class="calctable__value">350 000 руб.</span><!-- /.calctable__value -->
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <span class=""></span><!-- /.calctable__color calctable__color-blue -->
+                                      </td>
+                                      <td>
+                                        <span class="calctable__title">Итого</span><!-- /.calctable__title -->
+                                      </td>
+                                      <td>
+                                        <span class="calctable__value">1 350 000 руб.</span><!-- /.calctable__value -->
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div><!-- /.calctable -->
+                            </div><!-- /.calctotal__item -->
+                          </div><!-- /.calctotal -->
+                        </div><!-- /.calcform__total -->
+                      </div><!-- /.calcform__aside -->
                     </div><!-- /.calcform__content -->
+                  </div><!-- /.calcform__block -->
+                  <div class="calcform__block">
+                    <h1>Досрочные погашения</h1>
+                    <div class="calcform__item">
+                      <div class="calcform__buttons calcform__buttons_type2 flex">
+                        <div class="calcform__button">
+                          <a href='#' class="btn_main btn_calc">
+                            Добавить
+                          </a>
+                        </div><!-- /.calcform__button -->
+
+                      </div><!-- /.calcform__buttons -->
+                    </div>
+
+                    <div class="calcform__block calcform__block_newblock">
+                      <div class="calcform__newrow">
+                        <div class="calcnewrow">
+                          <div class="calcnewrow__col">
+                            <div class="calcform__item calcform__item_select">
+                              <div class="calcform__input">
+                                <div class="calcform__select">
+                                  <select>
+                                    <option value="0">Единовременно</option>
+                                    <option value="1">Не Единовременно</option>
+                                  </select>
+                                </div>
+                                <span class="placeholder">Периодичность погашения</span><!-- /.placeholder -->
+                              </div><!-- /.calcform__input -->
+                            </div><!-- /.calcform__item -->
+                          </div><!-- /.calcnewrow__col -->
+                          <div class="calcnewrow__col">
+                            <div class="calcform__item calcform__item_select">
+                              <div class="calcform__input">
+                                <div class="calcform__select">
+                                  <select>
+                                    <option value="0">Уменьшение срока кредита</option>
+                                    <option value="1">Не Уменьшение срока кредита</option>
+                                  </select>
+                                </div>
+                                <span class="placeholder">Тип расчёта</span><!-- /.placeholder -->
+                              </div><!-- /.calcform__input -->
+                            </div><!-- /.calcform__item -->
+                          </div><!-- /.calcnewrow__col -->
+                          <div class="calcnewrow__col">
+                            <div class="calcform__item calcform__item_select">
+                              <div class="calcform__input">
+                                <input type="text" data-number-format="" value='20000000'>
+                                <span class="placeholder">Сумма</span><!-- /.placeholder -->
+                              </div><!-- /.calcform__input -->
+                            </div><!-- /.calcform__item -->
+                          </div><!-- /.calcnewrow__col -->
+                          <div class="calcnewrow__col">
+                            <div class="calcform__item">
+                              <div class="calcform__input">
+                                <label for="">
+                                  <input type="text" data-toggle="datepicker" class='expand_more'>
+                                  <span class="placeholder">Дата</span>
+                                </label>
+                              </div><!-- /.calcform__input -->
+                            </div><!-- /.calcform__item -->
+                          </div><!-- /.calcnewrow__col -->
+                          <div class="calcnewrow__col">
+                            <div class="calcform__icon">
+                              <a href="#" class="calcform_remove" data-remove='calcform__row_1'>
+                                <img src="images/calcform_remove.svg" alt="">
+                              </a><!-- /.calcform_remove -->
+                            </div><!-- /.calcform__icon -->
+                          </div><!-- /.calcnewrow__col -->
+                        </div><!-- /.calcnewrow -->
+                      </div><!-- /.calcform__newrow -->
+                    </div><!-- /.calcform__block calcform__block_newblock -->
                   </div><!-- /.calcform__block -->
                 </form>
               </div><!-- /.calcform -->
