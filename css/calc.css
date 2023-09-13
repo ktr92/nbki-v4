@@ -354,6 +354,7 @@ input[data-toggle="datepicker"]:focus {
   line-height: 20px;
   border-radius: 10px;
   display: flex;
+  background: #fff;
   align-items: center;
   justify-content: center;
   letter-spacing: -0.01em;
@@ -529,4 +530,114 @@ button {
 a.calcform_remove {
   min-width: 24px;
   display: block;
+}
+
+.modal_calc .modal__title {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 38px; /* 126.667% */
+  letter-spacing: -0.3px;
+  margin-bottom: 15px;
+}
+.modal_calc .modal-content {
+  padding: 32px;
+}
+
+.modal_calc .calcform__input {
+  width: 100%;
+}
+
+.modal__header {
+  position: relative;
+}
+
+.modal_calc  .modal__header .modalclose {
+opacity: 1;
+}
+.modal_calc .modalclose {
+right: 0;
+top: 0;
+}
+.modal_calc .modal-dialog {
+  width: 400px;
+}
+
+.btn_main_small {
+  padding: 16px;
+  text-align: center;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: -0.14px;
+  margin: 0;
+  width: 100%;
+}
+
+.modal_calc .calcform__item .check-block label {
+  color: #7B7794;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 14px; /
+}
+
+.modal_calc .calcform__buttons{
+  margin: 16px 0;
+}
+.modal_calc .calcform__item_check{
+ margin-bottom: 32px;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.w-full {
+  width: 100%;
+}
+.calcform__block_newblock {
+  padding-bottom: 16px;margin-bottom: 16px;
+}
+.calcform__block_newblock:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.calcpage .nbki_v4.wrapperwhite {
+  border-radius: 10px;
+background: #FFF;
+box-shadow: 0px 4px 4px 0px rgba(115, 100, 178, 0.10);
+}
+.calcform__block_nob {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.calcform__block_nob > .calcform__item {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.calcform__block_nob > .calcform__item > .calcform__buttons {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.calccontent__banner {
+  margin: 64px 0;
+}
+
+@media (max-width: 767px) {
+  .modal_calc .modal-content {
+    padding: 32px 16px;
+  }
+  .modal_calc .modal__title {
+    padding-right: 30px;
+    font-size: 24px;
+    line-height: 1.2;
+  }
 }

@@ -630,265 +630,350 @@
           <div class="nbki_v4 wrapperwhite">
             <div class="pagetitle  ">
               <h1>Кредитный калькулятор НБКИ</h1>
-              <div class="calcform">
-                <form action="">
-                  <div class="calcform__block">
-                    <div class="calcform__row">
-                      <div class="calcform__col">
-                        <div class="calcform__item">
-                          <div class="calcform__input">
-                            <label class="form__label" for="calc_summ">
-                              <div class="form-control__wrapper range-slider" data-range-slider-type="calc_summ">
-                                <input id="calc_summ" type="text" data-stepdata="calc_summ" data-steptype="source"
-                                  class="form-control range-slider__control" data-max="10000000" data-min="1000"
-                                  data-summ-format="" name="calc_summ" type="text" inputmode="decimal" value="5000000">
-                                <div class="range-slider__ui"></div>
-                                <span class="placeholder">Выберите сумму кредита, руб</span>
+            </div>
 
-                              </div>
-                            </label>
+            <div class="calcform">
+              <form action="">
+                <div class="calcform__block">
+                  <div class="calcform__row">
+                    <div class="calcform__col">
+                      <div class="calcform__item">
+                        <div class="calcform__input">
+                          <label class="form__label" for="calc_summ">
+                            <div class="form-control__wrapper range-slider" data-range-slider-type="calc_summ">
+                              <input id="calc_summ" type="text" data-stepdata="calc_summ" data-steptype="source"
+                                class="form-control range-slider__control" data-max="10000000" data-min="1000"
+                                data-summ-format="" name="calc_summ" type="text" inputmode="decimal" value="5000000">
+                              <div class="range-slider__ui"></div>
+                              <span class="placeholder">Выберите сумму кредита, руб</span>
 
-                            <div class="calcform__limit">
-                              <div class="calclimit calclimit__min">1000 руб.</div>
-                              <div class="calclimit calclimit__right">10 млн руб.</div>
-
-                            </div><!-- /.calcaform__limit -->
-
-                          </div><!-- /.calcform__input -->
-                          <div class="calcform__slider"></div><!-- /.calcform__slider -->
-                        </div><!-- /.calcform__item -->
-                      </div><!-- /.calcform__col -->
-                      <div class="calcform__col">
-                        <div class="calcform__item">
-                          <div class="calcform__input">
-                            <label class="form__label" for="calc_creditTerm">
-                              <div class="form-control__wrapper range-slider" data-range-slider-type="calc_creditTerm">
-                                <input id="calc_creditTerm" type="text" data-stepdata="calc_creditTerm"
-                                  data-steptype="source" class="form-control range-slider__control" data-max="84"
-                                  data-min="1" data-number-format="" name="calc_creditTerm" type="text"
-                                  inputmode="decimal" value="42">
-                                <div class="range-slider__ui"></div>
-                                <span class="placeholder">Выберите срок кредита, мес.</span>
-
-                              </div>
-                            </label>
-
-                            <div class="calcform__limit">
-                              <div class="calclimit calclimit__min">1 мес.</div><!-- /.calclimit calclimit__min -->
-                              <div class="calclimit calclimit__right">84 мес.</div>
-                              <!-- /.calclimit calclimit__right -->
-                            </div><!-- /.calcaform__limit -->
-
-                          </div><!-- /.calcform__input -->
-                          <div class="calcform__slider"></div><!-- /.calcform__slider -->
-                        </div><!-- /.calcform__item -->
-                      </div><!-- /.calcform__col -->
-                      <div class="calcform__col">
-                        <div class="calcform__item">
-                          <div class="calcform__input">
-                            <label class="form__label" for="calc_creditRate">
-                              <div class="form-control__wrapper range-slider" data-range-slider-type="calc_creditRate">
-                                <input id="calc_creditRate" type="text" data-stepdata="calc_creditRate"
-                                  data-steptype="source" class="form-control range-slider__control" data-max="100"
-                                  data-min="0" data-rate-format="" name="calc_creditRate" type="text"
-                                  inputmode="decimal" value="50">
-                                <div class="range-slider__ui"></div>
-                                <span class="placeholder">Выберите ставку кредита, %</span>
-
-                              </div>
-                            </label>
-
-                            <div class="calcform__limit">
-                              <div class="calclimit calclimit__min">0%</div>
-                              <div class="calclimit calclimit__right">100%</div>
-                            </div><!-- /.calcaform__limit -->
-
-                          </div><!-- /.calcform__input -->
-                          <div class="calcform__slider"></div><!-- /.calcform__slider -->
-                        </div><!-- /.calcform__item -->
-                      </div><!-- /.calcform__col -->
-                    </div><!-- /.calcform__row -->
-                  </div><!-- /.calcform__block -->
-                  <div class="calcform__block calcform__block_border">
-                    <div class="calcform__content flex">
-                      <div class="calcform__main">
-                        <div class="calcform__item">
-                          <div class="calcform__input">
-                            <label for="">
-                              <input type="text" data-toggle="datepicker" class='expand_more'>
-                              <span class="placeholder">Дата выдачи</span>
-                            </label>
-                          </div><!-- /.calcform__input -->
-                        </div><!-- /.calcform__item -->
-                        <div class="calcform__item calcform__item_select">
-                          <div class="calcform__input">
-                            <div class="calcform__select">
-                              <select>
-                                <option value="0">Аннуитетный</option>
-                                <option value="1">Дифференцированный</option>
-                              </select>
                             </div>
-                            <span class="placeholder">Тип платежа</span><!-- /.placeholder -->
-                          </div><!-- /.calcform__input -->
-                        </div><!-- /.calcform__item -->
-                        <div class="calcform__item">
-                          <div class="calcform__buttons flex">
-                            <div class="calcform__button">
-                              <button class='btn_main btn_calc'>
-                                Рассчитать
-                              </button>
-                            </div><!-- /.calcform__button -->
-                            <div class="calcform__button">
-                              <a href='#' class='btn_blborder btn_calc'>
-                                Скачать график платежей
-                              </a>
-                            </div><!-- /.calcform__button -->
-                          </div><!-- /.calcform__buttons -->
-                        </div><!-- /.calcform__item -->
-                        <div class="calcform__item">
-                          <div class="check-block check-block_big">
-                            <input type="checkbox" id="id_checkcalc">
-                            <label for="id_checkcalc">Я согласен на обработку и хранение персональных данных</label>
-                            <div class="error_text"></div>
+                          </label>
+
+                          <div class="calcform__limit">
+                            <div class="calclimit calclimit__min">1000 руб.</div>
+                            <div class="calclimit calclimit__right">10 млн руб.</div>
+
+                          </div><!-- /.calcaform__limit -->
+
+                        </div><!-- /.calcform__input -->
+                        <div class="calcform__slider"></div><!-- /.calcform__slider -->
+                      </div><!-- /.calcform__item -->
+                    </div><!-- /.calcform__col -->
+                    <div class="calcform__col">
+                      <div class="calcform__item">
+                        <div class="calcform__input">
+                          <label class="form__label" for="calc_creditTerm">
+                            <div class="form-control__wrapper range-slider" data-range-slider-type="calc_creditTerm">
+                              <input id="calc_creditTerm" type="text" data-stepdata="calc_creditTerm"
+                                data-steptype="source" class="form-control range-slider__control" data-max="84"
+                                data-min="1" data-number-format="" name="calc_creditTerm" type="text"
+                                inputmode="decimal" value="42">
+                              <div class="range-slider__ui"></div>
+                              <span class="placeholder">Выберите срок кредита, мес.</span>
+
+                            </div>
+                          </label>
+
+                          <div class="calcform__limit">
+                            <div class="calclimit calclimit__min">1 мес.</div><!-- /.calclimit calclimit__min -->
+                            <div class="calclimit calclimit__right">84 мес.</div>
+                            <!-- /.calclimit calclimit__right -->
+                          </div><!-- /.calcaform__limit -->
+
+                        </div><!-- /.calcform__input -->
+                        <div class="calcform__slider"></div><!-- /.calcform__slider -->
+                      </div><!-- /.calcform__item -->
+                    </div><!-- /.calcform__col -->
+                    <div class="calcform__col">
+                      <div class="calcform__item">
+                        <div class="calcform__input">
+                          <label class="form__label" for="calc_creditRate">
+                            <div class="form-control__wrapper range-slider" data-range-slider-type="calc_creditRate">
+                              <input id="calc_creditRate" type="text" data-stepdata="calc_creditRate"
+                                data-steptype="source" class="form-control range-slider__control" data-max="100"
+                                data-min="0" data-rate-format="" name="calc_creditRate" type="text" inputmode="decimal"
+                                value="50">
+                              <div class="range-slider__ui"></div>
+                              <span class="placeholder">Выберите ставку кредита, %</span>
+
+                            </div>
+                          </label>
+
+                          <div class="calcform__limit">
+                            <div class="calclimit calclimit__min">0%</div>
+                            <div class="calclimit calclimit__right">100%</div>
+                          </div><!-- /.calcaform__limit -->
+
+                        </div><!-- /.calcform__input -->
+                        <div class="calcform__slider"></div><!-- /.calcform__slider -->
+                      </div><!-- /.calcform__item -->
+                    </div><!-- /.calcform__col -->
+                  </div><!-- /.calcform__row -->
+                </div><!-- /.calcform__block -->
+                <div class="calcform__block calcform__block_border">
+                  <div class="calcform__content flex">
+                    <div class="calcform__main">
+                      <div class="calcform__item">
+                        <div class="calcform__input">
+                          <label for="">
+                            <input type="text" data-toggle="datepicker" class='expand_more'>
+                            <span class="placeholder">Дата выдачи</span>
+                          </label>
+                        </div><!-- /.calcform__input -->
+                      </div><!-- /.calcform__item -->
+                      <div class="calcform__item calcform__item_select">
+                        <div class="calcform__input">
+                          <div class="calcform__select">
+                            <select>
+                              <option value="0">Аннуитетный</option>
+                              <option value="1">Дифференцированный</option>
+                            </select>
                           </div>
-                        </div><!-- /.calcform__item -->
-                      </div><!-- /.calcform__main -->
-                      <div class="calcform__aside">
-                        <div class="calcform__total">
-                          <div class="calctotal">
-                            <div class="calctotal__item">
-                              <div class="calctotal__title">Ежемесячный платеж</div><!-- /.calctotal__title -->
-                              <div class="calctotal__value">2 000</div><!-- /.calctotal__value -->
-                            </div><!-- /.calctotal__item -->
-                            <div class="calctotal__item">
-                              <div class="calctotal__title">Общая выплата</div><!-- /.calctotal__title -->
-                              <div class="calctotal__value">1 350 000</div><!-- /.calctotal__value -->
-                            </div><!-- /.calctotal__item -->
-                            <div class="calctotal__item calctotal__item_table">
-                              <div class="calctable">
-                                <table>
-                                  <tbody>
-                                    <tr>
-                                      <td>
-                                        <span
-                                          class="calctable__color calctable__color-blue"></span><!-- /.calctable__color calctable__color-blue -->
-                                      </td>
-                                      <td>
-                                        <span class="calctable__title">Кредит</span><!-- /.calctable__title -->
-                                      </td>
-                                      <td>
-                                        <span class="calctable__value">1 000 000 руб.</span><!-- /.calctable__value -->
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td>
-                                        <span
-                                          class="calctable__color calctable__color-red"></span><!-- /.calctable__color calctable__color-blue -->
-                                      </td>
-                                      <td>
-                                        <span class="calctable__title">Переплата</span><!-- /.calctable__title -->
-                                      </td>
-                                      <td>
-                                        <span class="calctable__value">350 000 руб.</span><!-- /.calctable__value -->
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td>
-                                        <span class=""></span><!-- /.calctable__color calctable__color-blue -->
-                                      </td>
-                                      <td>
-                                        <span class="calctable__title">Итого</span><!-- /.calctable__title -->
-                                      </td>
-                                      <td>
-                                        <span class="calctable__value">1 350 000 руб.</span><!-- /.calctable__value -->
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </div><!-- /.calctable -->
-                            </div><!-- /.calctotal__item -->
-                          </div><!-- /.calctotal -->
-                        </div><!-- /.calcform__total -->
-                      </div><!-- /.calcform__aside -->
-                    </div><!-- /.calcform__content -->
-                  </div><!-- /.calcform__block -->
-                  <div class="calcform__block">
-                    <h1>Досрочные погашения</h1>
-                    <div class="calcform__item">
-                      <div class="calcform__buttons calcform__buttons_type2 flex">
-                        <div class="calcform__button">
-                          <a href='#' class="btn_main btn_calc">
-                            Добавить
-                          </a>
-                        </div><!-- /.calcform__button -->
+                          <span class="placeholder">Тип платежа</span><!-- /.placeholder -->
+                        </div><!-- /.calcform__input -->
+                      </div><!-- /.calcform__item -->
+                      <div class="calcform__item">
+                        <div class="calcform__buttons flex">
+                          <div class="calcform__button">
+                            <button class='btn_main btn_calc'>
+                              Рассчитать
+                            </button>
+                          </div><!-- /.calcform__button -->
+                          <div class="calcform__button">
+                            <a href='#myModal_download' data-toggle="modal" class='btn_blborder btn_calc'>
+                              Скачать график платежей
+                            </a>
 
-                      </div><!-- /.calcform__buttons -->
-                    </div>
 
-                    <div class="calcform__block calcform__block_newblock">
-                      <div class="calcform__newrow">
+                            <div id="myModal_download" class="modal fade modal_calc">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                  <div class="modal-body">
+                                    <div class="modal_zvonok_content">
+                                      <div class="modal__header">
+                                        <div class="modal__title">Скачать график
+                                          платежей</div>
+                                        <span class="modalclose" data-dismiss="modal" aria-hidden="true">
+                                          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                              d="M23.7656 22.6336C23.8399 22.708 23.8988 22.7962 23.9391 22.8933C23.9793 22.9904 24 23.0945 24 23.1996C24 23.3047 23.9793 23.4088 23.9391 23.5059C23.8988 23.603 23.8399 23.6912 23.7656 23.7656C23.6912 23.8399 23.603 23.8988 23.5059 23.9391C23.4088 23.9793 23.3047 24 23.1996 24C23.0945 24 22.9904 23.9793 22.8933 23.9391C22.7962 23.8988 22.708 23.8399 22.6336 23.7656L16 17.1309L9.36637 23.7656C9.21626 23.9157 9.01268 24 8.8004 24C8.58812 24 8.38454 23.9157 8.23443 23.7656C8.08433 23.6155 8 23.4119 8 23.1996C8 22.9873 8.08433 22.7837 8.23443 22.6336L14.8691 16L8.23443 9.36637C8.08433 9.21626 8 9.01268 8 8.8004C8 8.58812 8.08433 8.38454 8.23443 8.23443C8.38454 8.08433 8.58812 8 8.8004 8C9.01268 8 9.21626 8.08433 9.36637 8.23443L16 14.8691L22.6336 8.23443C22.7837 8.08433 22.9873 8 23.1996 8C23.4119 8 23.6155 8.08433 23.7656 8.23443C23.9157 8.38454 24 8.58812 24 8.8004C24 9.01268 23.9157 9.21626 23.7656 9.36637L17.1309 16L23.7656 22.6336Z"
+                                              fill="#4563FF" />
+                                          </svg>
+
+                                        </span>
+                                      </div><!-- /.modal__header -->
+
+                                      <div class="modal_zvonok_form_content">
+                                        <div class="modal__content formblock">
+                                          <form id="formPay" method="post" action="#">
+
+                                            <div class="modal__inputs formblock__inputs">
+                                              <div class="modal__input formblock__input">
+                                                <div class="calcform__item calcform__item_select">
+                                                  <div class="calcform__input">
+                                                    <input type="email" data-number-format="" value="ivanov@mail.com"
+                                                      name="">
+                                                    <span class="placeholder">Электронная
+                                                      почта</span><!-- /.placeholder -->
+                                                  </div><!-- /.calcform__input -->
+                                                </div>
+                                              </div>
+
+                                            </div>
+
+                                            <div class="calcform__buttons">
+                                              <button type="submit" class="btn_main btn_calc btn_main_small">Отправить
+                                                график
+                                                на почту</button>
+                                            </div>
+                                            <div class="calcform__item calcform__item_check">
+                                              <div class="check-block">
+                                                <input type="checkbox" id="id_checkcalc_modal">
+                                                <label for="id_checkcalc_modal">Я согласен на обработку и хранение
+                                                  персональных данных</label>
+                                                <div class="error_text"></div>
+                                              </div>
+                                            </div><!-- /.calcform__item -->
+
+                                            <div class="calcform__buttons mb-0">
+                                              <a href='#' download
+                                                class="btn_blborder btn_calc w-full btn_main_small ">Скачать
+                                                график
+                                                платежей</a>
+                                            </div>
+                                          </form>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div><!-- /.calcform__button -->
+                        </div><!-- /.calcform__buttons -->
+                      </div><!-- /.calcform__item -->
+                      <div class="calcform__item">
+                        <div class="check-block check-block_big">
+                          <input type="checkbox" id="id_checkcalc">
+                          <label for="id_checkcalc">Я согласен на обработку и хранение персональных данных</label>
+                          <div class="error_text"></div>
+                        </div>
+                      </div><!-- /.calcform__item -->
+                    </div><!-- /.calcform__main -->
+                    <div class="calcform__aside">
+                      <div class="calcform__total">
+                        <div class="calctotal">
+                          <div class="calctotal__item">
+                            <div class="calctotal__title">Ежемесячный платеж</div><!-- /.calctotal__title -->
+                            <div class="calctotal__value">2 000</div><!-- /.calctotal__value -->
+                          </div><!-- /.calctotal__item -->
+                          <div class="calctotal__item">
+                            <div class="calctotal__title">Общая выплата</div><!-- /.calctotal__title -->
+                            <div class="calctotal__value">1 350 000</div><!-- /.calctotal__value -->
+                          </div><!-- /.calctotal__item -->
+                          <div class="calctotal__item calctotal__item_table">
+                            <div class="calctable">
+                              <table>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <span
+                                        class="calctable__color calctable__color-blue"></span><!-- /.calctable__color calctable__color-blue -->
+                                    </td>
+                                    <td>
+                                      <span class="calctable__title">Кредит</span><!-- /.calctable__title -->
+                                    </td>
+                                    <td>
+                                      <span class="calctable__value">1 000 000 руб.</span><!-- /.calctable__value -->
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <span
+                                        class="calctable__color calctable__color-red"></span><!-- /.calctable__color calctable__color-blue -->
+                                    </td>
+                                    <td>
+                                      <span class="calctable__title">Переплата</span><!-- /.calctable__title -->
+                                    </td>
+                                    <td>
+                                      <span class="calctable__value">350 000 руб.</span><!-- /.calctable__value -->
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <span class=""></span><!-- /.calctable__color calctable__color-blue -->
+                                    </td>
+                                    <td>
+                                      <span class="calctable__title">Итого</span><!-- /.calctable__title -->
+                                    </td>
+                                    <td>
+                                      <span class="calctable__value">1 350 000 руб.</span><!-- /.calctable__value -->
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div><!-- /.calctable -->
+                          </div><!-- /.calctotal__item -->
+                        </div><!-- /.calctotal -->
+                      </div><!-- /.calcform__total -->
+                    </div><!-- /.calcform__aside -->
+                  </div><!-- /.calcform__content -->
+                </div><!-- /.calcform__block -->
+                <div class="calcform__block calcform__block_nob">
+                  <h1>Досрочные погашения</h1>
+
+                  <div class="calcform__newrowscontainer">
+
+                  </div><!-- /.calcform__newrowscontainer -->
+
+                  <!-- этот код ниже будет генерироватья для каждого из "Досрочные погашения" при добавлении , с изменением id инпутов и data-атрибутов  --/
+
+
+                    <div class="calcform__block calcform__block_newblock" data-newblock="1">
+                      <div class="calcform__newrow" data-newrow="1">
                         <div class="calcnewrow">
                           <div class="calcnewrow__col">
                             <div class="calcform__item calcform__item_select">
                               <div class="calcform__input">
                                 <div class="calcform__select">
-                                  <select>
+                                  <select name='newrow_1_1'>
                                     <option value="0">Единовременно</option>
                                     <option value="1">Не Единовременно</option>
                                   </select>
                                 </div>
-                                <span class="placeholder">Периодичность погашения</span><!-- /.placeholder -->
-                              </div><!-- /.calcform__input -->
-                            </div><!-- /.calcform__item -->
-                          </div><!-- /.calcnewrow__col -->
+                                <span class="placeholder">Периодичность погашения</span>
+                              </div>
+                            </div>
+                          </div>
                           <div class="calcnewrow__col">
                             <div class="calcform__item calcform__item_select">
                               <div class="calcform__input">
                                 <div class="calcform__select">
-                                  <select>
+                                  <select name='newrow_1_2'>
                                     <option value="0">Уменьшение срока кредита</option>
                                     <option value="1">Не Уменьшение срока кредита</option>
                                   </select>
                                 </div>
-                                <span class="placeholder">Тип расчёта</span><!-- /.placeholder -->
-                              </div><!-- /.calcform__input -->
-                            </div><!-- /.calcform__item -->
-                          </div><!-- /.calcnewrow__col -->
+                                <span class="placeholder">Тип расчёта</span>
+                              </div>
+                            </div>
+                          </div>
                           <div class="calcnewrow__col">
                             <div class="calcform__item calcform__item_select">
                               <div class="calcform__input">
-                                <input type="text" data-number-format="" value='20000000'>
-                                <span class="placeholder">Сумма</span><!-- /.placeholder -->
-                              </div><!-- /.calcform__input -->
-                            </div><!-- /.calcform__item -->
-                          </div><!-- /.calcnewrow__col -->
+                                <input type="text" data-number-format="" value='20000000' name='newrow_1_3'>
+                                <span class="placeholder">Сумма</span>
+                              </div>
+                            </div>
+                          </div>
                           <div class="calcnewrow__col">
                             <div class="calcform__item">
                               <div class="calcform__input">
                                 <label for="">
-                                  <input type="text" data-toggle="datepicker" class='expand_more'>
+                                  <input type="text" data-toggle="datepicker" class='expand_more' name='newrow_1_4'>
                                   <span class="placeholder">Дата</span>
                                 </label>
-                              </div><!-- /.calcform__input -->
-                            </div><!-- /.calcform__item -->
-                          </div><!-- /.calcnewrow__col -->
+                              </div>
+                            </div>
+                          </div>
                           <div class="calcnewrow__col">
                             <div class="calcform__icon">
-                              <a href="#" class="calcform_remove" data-remove='calcform__row_1'>
+                              <a href="#" class="calcform_remove" data-remove='1'>
                                 <img src="images/calcform_remove.svg" alt="">
-                              </a><!-- /.calcform_remove -->
-                            </div><!-- /.calcform__icon -->
-                          </div><!-- /.calcnewrow__col -->
-                        </div><!-- /.calcnewrow -->
-                      </div><!-- /.calcform__newrow -->
-                    </div><!-- /.calcform__block calcform__block_newblock -->
-                  </div><!-- /.calcform__block -->
-                </form>
-              </div><!-- /.calcform -->
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
+                  <div class="calcform__item">
+                    <div class="calcform__buttons calcform__buttons_type2 flex">
+                      <div class="calcform__button">
+                        <a href='#' class="btn_main btn_calc" data-addnewrow='calcnewrow'>
+                          Добавить
+                        </a>
+                      </div>
+
+                    </div>
+
+                  </div>
+              </form>
             </div>
-          </div><!-- /.nbki_v4 wrapperwhite -->
-        </div>
+
+
+
+          </div>
+        </div><!-- /.nbki_v4 wrapperwhite -->
+
+        <div class="calccontent">
+          <div class="calccontent__banner"><a href="#"><img src="images/banner_alfa_5min_1021x1001.jpg" alt=""></a>
+          </div><!-- /.calccontent__banner -->
+        </div><!-- /.calccontent -->
       </div>
+    </div>
     </div>
     </footer>
     <div class="s-overlay"></div>
@@ -961,7 +1046,535 @@
     <script type="text/javascript" src="js/nouislider.min.js"></script>
     <script type="text/javascript" src="js/jquery.inputmask.min.js"></script>
     <script type="text/javascript" src="js/datepicker.min.js"></script>
-    <script type="text/javascript" src="js/calc.js"></script>
+    <!--     <script type="text/javascript" src="js/calc.js"></script>
+ -->
+    <script>
+      var rangeTimeout
+
+      function rangeSliderCreate(slideIndex, slide) {
+        var rangeSliderOptions
+        var rangeSliderType = $(slide).attr("data-range-slider-type")
+        var rangeSliderStart = parseFloat(
+          $(slide).find(".form-control").val().replace(/\s/g, "")
+        )
+        var rangeSliderMin = parseFloat(
+          $(slide).closest(".range-slider").find(".form-control").data("min")
+        )
+        var rangeSliderMax = parseFloat(
+          $(slide).closest(".range-slider").find(".form-control").data("max")
+        )
+
+        if (rangeSliderType === "calc_summ") {
+          rangeSliderOptions = {
+            start: [rangeSliderStart],
+            range: {
+              min: [rangeSliderMin, 1],
+              "20%": [100000, 1000],
+              "30%": [500000, 5000],
+              "50%": [5000000, 10000],
+              max: [rangeSliderMax],
+            },
+            connect: "lower",
+          }
+        } else if (rangeSliderType === "volume") {
+          rangeSliderOptions = {
+            start: [rangeSliderStart],
+            range: {
+              min: [rangeSliderMin, 0.01],
+              "40%": [0.5, 0.05],
+              "50%": [1, 0.1],
+              "76%": [3, 0.5],
+              "88%": [10, 1],
+              max: [rangeSliderMax],
+            },
+            connect: "lower",
+          }
+        } else if (rangeSliderType === "size") {
+          rangeSliderOptions = {
+            start: [rangeSliderStart],
+            range: {
+              min: [rangeSliderMin, 1],
+              "28%": [15, 1],
+              "48%": [30, 5],
+              "60%": [100, 10],
+              "70%": [300, 20],
+              "80%": [500, 20],
+              max: [rangeSliderMax],
+            },
+            connect: "lower",
+          }
+        } else if (rangeSliderType === "height") {
+          rangeSliderOptions = {
+            start: [rangeSliderStart],
+            range: {
+              min: [rangeSliderMin, 1],
+              "28%": [15, 1],
+              "48%": [30, 5],
+              "60%": [100, 10],
+              "80%": [300, 20],
+              max: [rangeSliderMax],
+            },
+            connect: "lower",
+          }
+        } else {
+          rangeSliderOptions = {
+            start: [rangeSliderStart],
+            range: {
+              min: [rangeSliderMin],
+              max: [rangeSliderMax],
+            },
+            connect: "lower",
+          }
+        }
+
+        $(slide).attr("data-range-slider-index", slideIndex)
+
+        var rangeSlidersItem = noUiSlider.create(
+          slide.querySelector(".range-slider__ui"),
+          rangeSliderOptions
+        )
+
+        $(slide.querySelector(".range-slider__ui")).data("slider", rangeSlidersItem)
+
+        rangeSlidersItem.on("slide", function (values, handle) {
+          clearTimeout(rangeTimeout)
+          if (
+            1
+            /*   rangeSliderType === "calc_summ" ||
+            rangeSliderType === "size" ||
+            rangeSliderType === "height" ||
+            rangeSliderType === "count"  */
+          ) {
+            $(this.target)
+              .closest(".range-slider")
+              .find(".form-control")
+              .val(Math.round(values[handle]))
+          } else if (rangeSliderType === "volume") {
+            $(this.target)
+              .closest(".range-slider")
+              .find(".form-control")
+              .val(parseFloat(values[handle]).toFixed(2) /* + ' РјВі'*/)
+          } else {
+            $(this.target)
+              .closest(".range-slider")
+              .find(".form-control")
+              .val(values[handle])
+          }
+        })
+        rangeSlidersItem.on("change", function () {
+          var target = $(this.target)
+          rangeTimeout = setTimeout(function () {
+            target.closest(".range-slider").find(".form-control").trigger("change")
+          }, 500)
+        })
+      }
+
+      function rangeSliderInit(rangeSliders) {
+        for (var i = 0; i < rangeSliders.length; i++) {
+          rangeSliderCreate(i, rangeSliders[i])
+        }
+
+        $(".range-slider__control").on("change", function () {
+          if (
+            $(this).closest(".range-slider").attr("data-range-slider-type") === "size"
+          ) {
+            if (
+              this.value.replace(/[^0-9]/g, "") >
+              parseInt(this.getAttribute("data-max"))
+            ) {
+              this.value = parseInt(this.getAttribute("data-max"))
+            } else if (
+              this.value.replace(/[^0-9]/g, "") <
+              parseInt(this.getAttribute("data-min")) ||
+              this.value.replace(/[^0-9]/g, "") === ""
+            ) {
+              this.value = parseInt(this.getAttribute("data-min"))
+            }
+            $(this)
+              .next()
+              .data("slider")
+              .set(parseInt(this.value.replace(/[^0-9]/g, "")))
+          }
+
+          if (
+            1
+            /*  $(this).closest(".range-slider").attr("data-range-slider-type") ===
+            "calc_summ" */
+          ) {
+            if (
+              this.value.replace(/[^0-9]/g, "") >
+              parseInt(this.getAttribute("data-max"))
+            ) {
+              this.value = parseInt(this.getAttribute("data-max"))
+            } else if (
+              this.value.replace(/[^0-9]/g, "") <
+              parseInt(this.getAttribute("data-min")) ||
+              this.value.replace(/[^0-9]/g, "") === ""
+            ) {
+              this.value = parseInt(this.getAttribute("data-min"))
+            }
+            $(this)
+              .next()
+              .data("slider")
+              .set(parseInt(this.value.replace(/[^0-9]/g, "")))
+            if (0) {
+              if (
+                parseInt(
+                  $('[name="max"]')
+                    .val()
+                    .replace(/[^0-9]/g, "")
+                ) >
+                parseInt(
+                  $('[name="calc_summ"]')
+                    .val()
+                    .replace(/[^0-9]/g, "")
+                )
+              ) {
+                $('[name="calc_summ"]').val($('[name="max"]').val())
+                $('[name="calc_summ"]')
+                  .next()
+                  .data("slider")
+                  .set(parseInt(this.value.replace(/[^0-9]/g, "")))
+              }
+            }
+          } else if (
+            $(this).closest(".range-slider").attr("data-range-slider-type") ===
+            "volume"
+          ) {
+            if (parseFloat(this.value) > parseFloat(this.getAttribute("data-max"))) {
+              this.value = parseFloat(this.getAttribute("data-max"))
+            } else if (
+              parseFloat(this.value) < parseFloat(this.getAttribute("data-min")) ||
+              parseFloat(this.value) === ""
+            ) {
+              this.value = parseFloat(this.getAttribute("data-min"))
+            }
+            if (!parseFloat(this.value) || parseFloat(this.value) === 0) {
+              this.value = parseFloat(this.getAttribute("data-min"))
+            }
+            $(this)
+              .next()
+              .data("slider")
+              .set(parseFloat(this.value /*.replace(/[^0-9]/g, '')*/).toFixed(2))
+          }
+        })
+      }
+
+      $(document).ready(function () {
+        $("[data-summ-format]").inputmask("integer", {
+          mask: "( 999){+|1}",
+          numericInput: true,
+          showMaskOnHover: false,
+          showMaskOnFocus: false,
+          rightAlign: false,
+        })
+
+        $("[data-volume-format]").inputmask({
+          rightAlign: false,
+          alias: "numeric",
+          digits: 2,
+          suffix: " м³",
+          showMaskOnHover: false,
+          showMaskOnFocus: false,
+        })
+        $("[data-size-format]").inputmask({
+          mask: "( 999){+|1} см",
+          numericInput: true,
+          showMaskOnHover: false,
+          showMaskOnFocus: false,
+          rightAlign: false,
+        })
+        $("[data-rate-format]").inputmask({
+          mask: "( 999){+|1} %",
+          numericInput: true,
+          showMaskOnHover: false,
+          showMaskOnFocus: false,
+          rightAlign: false,
+        })
+        $("[data-number-format]").inputmask({
+          mask: "( 999){+|1}",
+          numericInput: true,
+          showMaskOnHover: false,
+          showMaskOnFocus: false,
+          rightAlign: false,
+        })
+
+        if ($(".range-slider").length) {
+          var rangeSliders = $(".range-slider")
+          rangeSliderInit(rangeSliders)
+        }
+      })
+      function initDatepicker() {
+        $('[data-toggle="datepicker"]').datepicker({
+          // options here
+          autoHide: true,
+          autoPick: true,
+          format: "dd.mm.yyyy",
+          language: "ru-Ru",
+          date: Date.now(),
+          weekStart: 1,
+          days: [
+            "Воскресенье",
+            "Понедельник",
+            "Вторник",
+            "Среда",
+            "Четверг",
+            "Пятница",
+            "Суббота",
+          ],
+          daysShort: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+          daysMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+          months: [
+            "Январь",
+            "Февраль",
+            "Март",
+            "Апрель",
+            "Май",
+            "Июнь",
+            "Июль",
+            "Август",
+            "Сентябрь",
+            "Октябрь",
+            "Ноябрь",
+            "Декабрь",
+          ],
+          monthsShort: [
+            "Янв",
+            "Фер",
+            "Мар",
+            "Апр",
+            "Май",
+            "Июн",
+            "Июл",
+            "Авг",
+            "Сен",
+            "Окт",
+            "Ноя",
+            "Дек",
+          ],
+
+          mutedClass: "muted",
+          pickedClass: "picked",
+          disabledClass: "disabled",
+          highlightedClass: "highlighted",
+          template:
+            '<div class="datepicker-container">' +
+            '<div class="datepicker-panel" data-view="years picker">' +
+            "<ul>" +
+            '<li data-view="years prev">&lsaquo;</li>' +
+            '<li data-view="years current"></li>' +
+            '<li data-view="years next">&rsaquo;</li>' +
+            "</ul>" +
+            '<ul data-view="years"></ul>' +
+            "</div>" +
+            '<div class="datepicker-panel" data-view="months picker">' +
+            "<ul>" +
+            '<li data-view="year prev">&lsaquo;</li>' +
+            '<li data-view="year current"></li>' +
+            '<li data-view="year next">&rsaquo;</li>' +
+            "</ul>" +
+            '<ul data-view="months"></ul>' +
+            "</div>" +
+            '<div class="datepicker-panel" data-view="days picker">' +
+            "<ul>" +
+            '<li data-view="month prev">&lsaquo;</li>' +
+            '<li data-view="month current"></li>' +
+            '<li data-view="month next">&rsaquo;</li>' +
+            "</ul>" +
+            '<ul data-view="week"></ul>' +
+            '<ul data-view="days"></ul>' +
+            "</div>" +
+            "</div>",
+          template:
+            '<div class="datepicker-container">' +
+            '<div class="datepicker-panel" data-view="years picker">' +
+            '<ul class="datepicker-nav">' +
+            '<li data-view="month prev">&lsaquo;</li>' +
+            '<li data-view="month current"></li>' +
+            '<li data-view="month next">&rsaquo;</li>' +
+            "</ul>" +
+            '<ul data-view="years"></ul>' +
+            "</div>" +
+            '<div class="datepicker-panel" data-view="months picker">' +
+            '<ul class="datepicker-nav">' +
+            '<li data-view="month prev">&lsaquo;</li>' +
+            '<li data-view="month current"></li>' +
+            '<li data-view="month next">&rsaquo;</li>' +
+            "</ul>" +
+            '<ul data-view="months"></ul>' +
+            "</div>" +
+            '<div class="datepicker-panel" data-view="days picker">' +
+            '<ul class="datepicker-nav">' +
+            '<li data-view="month prev">&lsaquo;</li>' +
+            '<li data-view="month current"></li>' +
+            '<li data-view="month next">&rsaquo;</li>' +
+            "</ul>" +
+            '<ul data-view="week"></ul>' +
+            '<ul data-view="days"></ul>' +
+            "</div>" +
+            "</div>",
+          /*  startDate: Date.now(), */
+        })
+      }
+      function initSelect(selector) {
+        var customSelect = selector
+
+        customSelect.each(function () {
+          var thisCustomSelect = $(this),
+            options = thisCustomSelect.find("option"),
+            firstOptionText = options.first().text()
+
+          var selectedItem = $("<div></div>", {
+            class: "calcform__select-selected",
+          })
+            .appendTo(thisCustomSelect)
+            .text(firstOptionText)
+
+          var allItems = $("<div></div>", {
+            class: "calcform__select-all all-items-hide",
+          }).appendTo(thisCustomSelect)
+
+          options.each(function () {
+            var that = $(this),
+              optionText = that.text()
+
+            var item = $("<div></div>", {
+              class: "calcform__select-item",
+              on: {
+                click: function () {
+                  $(".calcform__select-item").removeClass("active")
+                  $(this).addClass("active")
+                  var selectedOptionText = that.text()
+                  selectedItem.text(selectedOptionText).removeClass("arrowanim")
+                  allItems.addClass("all-items-hide")
+                },
+              },
+            })
+              .appendTo(allItems)
+              .text(optionText)
+          })
+          $(".calcform__select").each((index, item) => {
+            $(item).addClass("calcform__select_initialized")
+            $(item).find(".calcform__select-item:first").addClass("active")
+          })
+        })
+
+        var selectedItem = $(".calcform__select-selected"),
+          allItems = $(".calcform__select-all")
+
+        selectedItem.on("click", function (e) {
+          var currentSelectedItem = $(this),
+            currentAllItems = currentSelectedItem.next(".calcform__select-all")
+
+          allItems.not(currentAllItems).addClass("all-items-hide")
+          selectedItem.not(currentSelectedItem).removeClass("arrowanim")
+
+          currentAllItems.toggleClass("all-items-hide")
+          currentSelectedItem.toggleClass("arrowanim")
+
+          e.stopPropagation()
+        })
+
+        $(document).on("click", function () {
+          var opened = $(".calcform__select-all:not(.all-items-hide)"),
+            index = opened.parent().index()
+
+          customSelect
+            .eq(index)
+            .find(".calcform__select-all")
+            .addClass("all-items-hide")
+          customSelect
+            .eq(index)
+            .find(".calcform__select-selected")
+            .removeClass("arrowanim")
+        })
+      }
+
+      $(document).ready(function () {
+        let count = $("[data-newrow]").length
+
+        $("[data-addnewrow]").on("click", function (e) {
+          e.preventDefault()
+          count++
+
+          $('.calcform__newrowscontainer').append(`<div class="calcform__block calcform__block_newblock" data-newblock="${count}">
+    <div class="calcform__newrow" data-newrow="${count}">
+      <div class="calcnewrow">
+        <div class="calcnewrow__col">
+          <div class="calcform__item calcform__item_select">
+            <div class="calcform__input">
+              <div class="calcform__select">
+                <select  name='newrow_${count}_1'>
+                  <option value="0">Единовременно</option>
+                  <option value="1">Не Единовременно</option>
+                </select>
+              </div>
+              <span class="placeholder">Периодичность погашения</span><!-- /.placeholder -->
+            </div><!-- /.calcform__input -->
+          </div><!-- /.calcform__item -->
+        </div><!-- /.calcnewrow__col -->
+        <div class="calcnewrow__col">
+          <div class="calcform__item calcform__item_select">
+            <div class="calcform__input">
+              <div class="calcform__select">
+                <select name='newrow_${count}_2'>
+                  <option value="0">Уменьшение срока кредита</option>
+                  <option value="1">Не Уменьшение срока кредита</option>
+                </select>
+              </div>
+              <span class="placeholder">Тип расчёта</span><!-- /.placeholder -->
+            </div><!-- /.calcform__input -->
+          </div><!-- /.calcform__item -->
+        </div><!-- /.calcnewrow__col -->
+        <div class="calcnewrow__col">
+          <div class="calcform__item calcform__item_select">
+            <div class="calcform__input">
+              <input type="text" data-number-format="" value='20000000' name='newrow_${count}_3'>
+              <span class="placeholder">Сумма</span><!-- /.placeholder -->
+            </div><!-- /.calcform__input -->
+          </div><!-- /.calcform__item -->
+        </div><!-- /.calcnewrow__col -->
+        <div class="calcnewrow__col">
+          <div class="calcform__item">
+            <div class="calcform__input">
+              <label for="">
+                <input type="text" data-toggle="datepicker" class='expand_more' name='newrow_${count}_4'>
+                <span class="placeholder">Дата</span>
+              </label>
+            </div><!-- /.calcform__input -->
+          </div><!-- /.calcform__item -->
+        </div><!-- /.calcnewrow__col -->
+        <div class="calcnewrow__col">
+          <div class="calcform__icon">
+            <a href="#" class="calcform_remove" data-remove='${count}'>
+              <img src="images/calcform_remove.svg" alt="">
+            </a><!-- /.calcform_remove -->
+          </div><!-- /.calcform__icon -->
+        </div><!-- /.calcnewrow__col -->
+      </div><!-- /.calcnewrow -->
+    </div><!-- /.calcform__newrow -->
+  </div><!-- /.calcform__block calcform__block_newblock -->`)
+
+
+          initSelect($(".calcform__select").not(".calcform__select_initialized"))
+          initDatepicker()
+        })
+
+        $(document).on("click", "[data-remove]", function (e) {
+          e.preventDefault()
+          let id = $(this).data("remove")
+          /*   if ($("[data-remove]").length > 1) { */
+          $(this).closest(`[data-newblock=${id}]`).remove()
+          /* } */
+        })
+      })
+
+      $(document).ready(function () {
+        initSelect($(".calcform__select"))
+        initDatepicker()
+      })
+
+    </script>
 </body>
 
 </html>

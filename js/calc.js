@@ -252,7 +252,8 @@ $(document).ready(function () {
     var rangeSliders = $(".range-slider")
     rangeSliderInit(rangeSliders)
   }
-
+})
+function initDatepicker() {
   $('[data-toggle="datepicker"]').datepicker({
     // options here
     autoHide: true,
@@ -363,10 +364,9 @@ $(document).ready(function () {
       "</div>",
     /*  startDate: Date.now(), */
   })
-})
-
-$(document).ready(function () {
-  var customSelect = $(".calcform__select")
+}
+function initSelect(selector) {
+  var customSelect = selector
 
   customSelect.each(function () {
     var thisCustomSelect = $(this),
@@ -403,7 +403,7 @@ $(document).ready(function () {
         .text(optionText)
     })
     $(".calcform__select").each((index, item) => {
-      console.log(item)
+      $(item).addClass("calcform__select_initialized")
       $(item).find(".calcform__select-item:first").addClass("active")
     })
   })
@@ -437,4 +437,88 @@ $(document).ready(function () {
       .find(".calcform__select-selected")
       .removeClass("arrowanim")
   })
+}
+
+$(document).ready(function () {
+  let count = $("[data-newrow]").length
+
+  $("[data-addnewrow]").on("click", function (e) {
+    e.preventDefault()
+    count++
+
+    $(`<div class="calcform__block calcform__block_newblock" data-newblock="${count}">
+    <div class="calcform__newrow" data-newrow="${count}">
+      <div class="calcnewrow">
+        <div class="calcnewrow__col">
+          <div class="calcform__item calcform__item_select">
+            <div class="calcform__input">
+              <div class="calcform__select">
+                <select  name='newrow_${count}_1'>
+                  <option value="0">Единовременно</option>
+                  <option value="1">Не Единовременно</option>
+                </select>
+              </div>
+              <span class="placeholder">Периодичность погашения</span><!-- /.placeholder -->
+            </div><!-- /.calcform__input -->
+          </div><!-- /.calcform__item -->
+        </div><!-- /.calcnewrow__col -->
+        <div class="calcnewrow__col">
+          <div class="calcform__item calcform__item_select">
+            <div class="calcform__input">
+              <div class="calcform__select">
+                <select name='newrow_${count}_2'>
+                  <option value="0">Уменьшение срока кредита</option>
+                  <option value="1">Не Уменьшение срока кредита</option>
+                </select>
+              </div>
+              <span class="placeholder">Тип расчёта</span><!-- /.placeholder -->
+            </div><!-- /.calcform__input -->
+          </div><!-- /.calcform__item -->
+        </div><!-- /.calcnewrow__col -->
+        <div class="calcnewrow__col">
+          <div class="calcform__item calcform__item_select">
+            <div class="calcform__input">
+              <input type="text" data-number-format="" value='20000000' name='newrow_${count}_3'>
+              <span class="placeholder">Сумма</span><!-- /.placeholder -->
+            </div><!-- /.calcform__input -->
+          </div><!-- /.calcform__item -->
+        </div><!-- /.calcnewrow__col -->
+        <div class="calcnewrow__col">
+          <div class="calcform__item">
+            <div class="calcform__input">
+              <label for="">
+                <input type="text" data-toggle="datepicker" class='expand_more' name='newrow_${count}_4'>
+                <span class="placeholder">Дата</span>
+              </label>
+            </div><!-- /.calcform__input -->
+          </div><!-- /.calcform__item -->
+        </div><!-- /.calcnewrow__col -->
+        <div class="calcnewrow__col">
+          <div class="calcform__icon">
+            <a href="#" class="calcform_remove" data-remove='${count}'>
+              <img src="images/calcform_remove.svg" alt="">
+            </a><!-- /.calcform_remove -->
+          </div><!-- /.calcform__icon -->
+        </div><!-- /.calcnewrow__col -->
+      </div><!-- /.calcnewrow -->
+    </div><!-- /.calcform__newrow -->
+  </div><!-- /.calcform__block calcform__block_newblock -->`)
+      .insertBefore($(this))
+      .not(".first-bar")
+    initSelect($(".calcform__select").not(".calcform__select_initialized"))
+    initDatepicker()
+  })
+
+  $(document).on("click", "[data-remove]", function (e) {
+    e.preventDefault()
+    let id = $(this).data("remove")
+    /*   if ($("[data-remove]").length > 1) { */
+    $(this).closest(`[data-newblock=${id}]`).remove()
+    /* } */
+  })
+})
+
+$(document).ready(function () {
+  initSelect($(".calcform__select"))
+  initDatepicker()
 })
