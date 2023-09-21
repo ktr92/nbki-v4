@@ -20,7 +20,7 @@
   <link rel="stylesheet" type="text/css" href="css/nouislider.min.css">
   <link rel="stylesheet" type="text/css" href="css/datepicker.min.css">
   <link rel="stylesheet" type="text/css" href="css/corp.css">
-  <link rel="stylesheet" type="text/css" href="css/calc.css">
+  <link rel="stylesheet" type="text/css" href="css/calc.css?v111">
   <!--[if lt IE 9]>
 																<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
 																<![endif]-->
@@ -641,11 +641,12 @@
                         <div class="calcform__input">
                           <label class="form__label" for="calc_summ">
                             <div class="form-control__wrapper range-slider" data-range-slider-type="calc_summ">
+                              <span class="placeholder">Выберите сумму кредита, руб.</span>
+
                               <input id="calc_summ" type="text" data-stepdata="calc_summ" data-steptype="source"
                                 class="form-control range-slider__control" data-max="10000000" data-min="1000"
                                 data-summ-format="" name="calc_summ" type="text" inputmode="decimal" value="5000000">
                               <div class="range-slider__ui"></div>
-                              <span class="placeholder">Выберите сумму кредита, руб</span>
 
                             </div>
                           </label>
@@ -665,12 +666,13 @@
                         <div class="calcform__input">
                           <label class="form__label" for="calc_creditTerm">
                             <div class="form-control__wrapper range-slider" data-range-slider-type="calc_creditTerm">
+                              <span class="placeholder">Выберите срок кредита, мес.</span>
+
                               <input id="calc_creditTerm" type="text" data-stepdata="calc_creditTerm"
                                 data-steptype="source" class="form-control range-slider__control" data-max="84"
                                 data-min="1" data-number-format="" name="calc_creditTerm" type="text"
                                 inputmode="decimal" value="42">
                               <div class="range-slider__ui"></div>
-                              <span class="placeholder">Выберите срок кредита, мес.</span>
 
                             </div>
                           </label>
@@ -690,15 +692,17 @@
                         <div class="calcform__input">
                           <label class="form__label" for="calc_creditRate">
                             <div class="form-control__wrapper range-slider" data-range-slider-type="calc_creditRate">
-                              <input id="calc_creditRate" type="text" data-stepdata="calc_creditRate"
-                                data-steptype="source" class="form-control range-slider__control" data-max="100"
-                                data-min="0" data-rate-format="" name="calc_creditRate" type="text" inputmode="decimal"
-                                value="50">
-                              <div class="range-slider__ui"></div>
                               <span class="placeholder">Выберите ставку кредита, %</span>
+
+                              <input id="calc_creditRate" type="text" data-stepdata="calc_creditRate"
+                                data-steptype="source" class="form-control range-slider__control" data-max="99.99"
+                                data-min="00.00" data-rate-format="" name="calc_creditRate" type="text"
+                                inputmode="decimal" value="50.00 %">
+                              <div class="range-slider__ui" id='calc_creditRate_slider'></div>
 
                             </div>
                           </label>
+
 
                           <div class="calcform__limit">
                             <div class="calclimit calclimit__min">0%</div>
@@ -711,28 +715,89 @@
                     </div><!-- /.calcform__col -->
                   </div><!-- /.calcform__row -->
                 </div><!-- /.calcform__block -->
-                <div class="calcform__block calcform__block_border">
+                <div class="calcform__block calcform__block_border calcform__block_params">
                   <div class="calcform__content flex">
                     <div class="calcform__main">
                       <div class="calcform__item">
                         <div class="calcform__input">
-                          <label for="">
-                            <input type="text" data-toggle="datepicker" class='expand_more'>
+                          <label for="" class='mobile_flex'>
                             <span class="placeholder">Дата выдачи</span>
+
+                            <input type="text" data-toggle="datepicker" class='expand_more'>
                           </label>
                         </div><!-- /.calcform__input -->
                       </div><!-- /.calcform__item -->
                       <div class="calcform__item calcform__item_select">
-                        <div class="calcform__input">
+                        <div class="calcform__input mobile_flex">
+                          <span class="placeholder">Тип платежа</span><!-- /.placeholder -->
+
                           <div class="calcform__select">
                             <select>
                               <option value="0">Аннуитетный</option>
                               <option value="1">Дифференцированный</option>
                             </select>
                           </div>
-                          <span class="placeholder">Тип платежа</span><!-- /.placeholder -->
                         </div><!-- /.calcform__input -->
                       </div><!-- /.calcform__item -->
+
+                      <div class="calcform__aside onlyMobile">
+                        <div class="calcform__total">
+                          <div class="calctotal">
+                            <div class="calctotal__item">
+                              <div class="calctotal__title">Ежемесячный платеж</div><!-- /.calctotal__title -->
+                              <div class="calctotal__value">2 000</div><!-- /.calctotal__value -->
+                            </div><!-- /.calctotal__item -->
+                            <div class="calctotal__item">
+                              <div class="calctotal__title">Общая выплата</div><!-- /.calctotal__title -->
+                              <div class="calctotal__value">1 350 000</div><!-- /.calctotal__value -->
+                            </div><!-- /.calctotal__item -->
+                            <div class="calctotal__item calctotal__item_table">
+                              <div class="calctable">
+                                <table>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <span
+                                          class="calctable__color calctable__color-blue"></span><!-- /.calctable__color calctable__color-blue -->
+                                      </td>
+                                      <td>
+                                        <span class="calctable__title">Кредит</span><!-- /.calctable__title -->
+                                      </td>
+                                      <td>
+                                        <span class="calctable__value">1 000 000 руб.</span><!-- /.calctable__value -->
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <span
+                                          class="calctable__color calctable__color-red"></span><!-- /.calctable__color calctable__color-blue -->
+                                      </td>
+                                      <td>
+                                        <span class="calctable__title">Переплата</span><!-- /.calctable__title -->
+                                      </td>
+                                      <td>
+                                        <span class="calctable__value">350 000 руб.</span><!-- /.calctable__value -->
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <span class=""></span><!-- /.calctable__color calctable__color-blue -->
+                                      </td>
+                                      <td>
+                                        <span class="calctable__title">Итого</span><!-- /.calctable__title -->
+                                      </td>
+                                      <td>
+                                        <span class="calctable__value">1 350 000 руб.</span><!-- /.calctable__value -->
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div><!-- /.calctable -->
+                            </div><!-- /.calctotal__item -->
+                          </div><!-- /.calctotal -->
+                        </div><!-- /.calcform__total -->
+                      </div><!-- /.calcform__aside -->
+
                       <div class="calcform__item">
                         <div class="calcform__buttons flex">
                           <div class="calcform__button">
@@ -742,7 +807,7 @@
                           </div><!-- /.calcform__button -->
                           <div class="calcform__button">
                             <a href='#myModal_download' data-toggle="modal" class='btn_blborder btn_calc'>
-                              Скачать график платежей
+                              Отправить на email
                             </a>
 
 
@@ -753,8 +818,7 @@
                                   <div class="modal-body">
                                     <div class="modal_zvonok_content">
                                       <div class="modal__header">
-                                        <div class="modal__title">Скачать график
-                                          платежей</div>
+                                        <div class="modal__title">График платежей сформирован</div>
                                         <span class="modalclose" data-dismiss="modal" aria-hidden="true">
                                           <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -768,16 +832,17 @@
 
                                       <div class="modal_zvonok_form_content">
                                         <div class="modal__content formblock">
-                                          <form id="formPay" method="post" action="#">
+                                          <form method="post" action="#">
 
                                             <div class="modal__inputs formblock__inputs">
                                               <div class="modal__input formblock__input">
                                                 <div class="calcform__item calcform__item_select">
                                                   <div class="calcform__input">
-                                                    <input type="email" data-number-format="" value="ivanov@mail.com"
-                                                      name="">
                                                     <span class="placeholder">Электронная
                                                       почта</span><!-- /.placeholder -->
+                                                    <input type="email" data-number-format="" value="ivanov@mail.com"
+                                                      name="">
+
                                                   </div><!-- /.calcform__input -->
                                                 </div>
                                               </div>
@@ -786,8 +851,7 @@
 
                                             <div class="calcform__buttons">
                                               <button type="submit" class="btn_main btn_calc btn_main_small">Отправить
-                                                график
-                                                на почту</button>
+                                                график на email</button>
                                             </div>
                                             <div class="calcform__item calcform__item_check">
                                               <div class="check-block">
@@ -798,12 +862,12 @@
                                               </div>
                                             </div><!-- /.calcform__item -->
 
-                                            <div class="calcform__buttons mb-0">
+                                            <!--  <div class="calcform__buttons mb-0">
                                               <a href='#' download
                                                 class="btn_blborder btn_calc w-full btn_main_small ">Скачать
                                                 график
                                                 платежей</a>
-                                            </div>
+                                            </div> -->
                                           </form>
                                         </div>
                                       </div>
@@ -813,17 +877,23 @@
                               </div>
                             </div>
                           </div><!-- /.calcform__button -->
+                          <div class="calcform__button">
+                            <a href="#" class='calcform__link'>
+                              <img src="images/download.svg" alt="">
+                              <span>Скачать .pdf</span>
+                            </a>
+                          </div><!-- /.calcform__button -->
                         </div><!-- /.calcform__buttons -->
                       </div><!-- /.calcform__item -->
-                      <div class="calcform__item">
+                      <!--  <div class="calcform__item">
                         <div class="check-block check-block_big">
                           <input type="checkbox" id="id_checkcalc">
                           <label for="id_checkcalc">Я согласен на обработку и хранение персональных данных</label>
                           <div class="error_text"></div>
                         </div>
-                      </div><!-- /.calcform__item -->
+                      </div> --><!-- /.calcform__item -->
                     </div><!-- /.calcform__main -->
-                    <div class="calcform__aside">
+                    <div class="calcform__aside onlyDesktop">
                       <div class="calcform__total">
                         <div class="calctotal">
                           <div class="calctotal__item">
@@ -956,6 +1026,11 @@
                           Добавить
                         </a>
                       </div>
+                      <div class="calcform__button">
+                        <a href='#' class="btn_main btn_calc btn_blborder" data-clearcalc='calcnewrow'>
+                          Очистить
+                        </a>
+                      </div>
 
                     </div>
 
@@ -969,8 +1044,111 @@
         </div><!-- /.nbki_v4 wrapperwhite -->
 
         <div class="calccontent">
-          <div class="calccontent__banner"><a href="#"><img src="images/banner_alfa_5min_1021x1001.jpg" alt=""></a>
+          <div class="calccontent__banner">
+            <div class="calccontent__imgbanner">
+              <a href="https://person.nbki.ru/login?utm_source=sait&utm_medium=calculator" target='_blank'
+                class='onDesktop'><img src="images/banner_alfa_5min_1021x1001.jpg" alt=""></a>
+              <a href="https://person.nbki.ru/login?utm_source=sait&utm_medium=calculator" target='_blank'
+                class='onMobile'><img src="images/alfa-mobile.png" alt=""></a>
+
+            </div><!-- /.calccontent__imgbanner -->
           </div><!-- /.calccontent__banner -->
+
+          <div class="calccontent__banner">
+            <div class="newsdetail__banner">
+              <div class="pagebanner pagebanner_blue pagebanner_pkr ">
+                <div class="pagebanner__content">
+                  <div class="pagebanner__cols">
+                    <div class="pagebanner__left">
+                      <div class="pagebanner__main">
+                        <div class="pagebanner__title onlyDesktop">
+                          Подобрать кредит, который одобрят
+                        </div>
+                      </div>
+                      <div class="pagebanner__text">
+                        Рассчитайте персональный кредитный рейтинг<br> и подберите самый выгодный кредит
+                      </div>
+                      <div class="pagebanner__buttons">
+                        <a href="/pkr/" target="_blank" class="btn_main btn_main2">Перейти в личный кабинет</a> <span
+                          class="pagebanner__info">Это
+                          бесплатно</span>
+                      </div>
+                    </div>
+                    <div class="pagebanner__right">
+                      <div class="pagebanner__title onlyMobile">
+                        Подобрать кредит, <br> который одобрят
+                      </div>
+                      <div class="pagebanner__image">
+                        <img src="https://story.nbki.ru/upload/pkr-blue.gif" alt="пкр">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- /.calccontent__banner -->
+
+          <div class="calccontent__items">
+            <h2>
+              Зачем нужен кредитный калькулятор:
+            </h2>
+            <div class="cols3">
+              <div class="cols3__col">
+                <div class="calccontent__item">
+                  <div class="caclcontent__icon caclcontent__icon_blue"></div>
+                  <!-- /.caclcontent__icon caclcontent__icon_blue -->
+                  <div class="calccontent__title">
+                    Проверка основных кредитных показателей
+                  </div>
+                  <div class="calccontent__text">
+                    Узнайте сумму ежемесячного платежа и общей выплаты
+                  </div>
+                </div>
+              </div>
+              <div class="cols3__col">
+                <div class="calccontent__item">
+                  <div class="caclcontent__icon "></div>
+                  <!-- /.caclcontent__icon caclcontent__icon_blue -->
+                  <div class="calccontent__title">
+                    Оценка собственных сил
+                  </div>
+                  <div class="calccontent__text">
+                    Проверьте, подойдут ли вам условия выбранного вами банка
+                  </div>
+                </div>
+              </div>
+              <div class="cols3__col">
+                <div class="calccontent__item">
+                  <div class="caclcontent__icon caclcontent__icon_red"></div>
+                  <!-- /.caclcontent__icon caclcontent__icon_blue -->
+                  <div class="calccontent__title">
+                    Помощь в выборе оптимального кредитного предложения
+                  </div>
+                  <div class="calccontent__text">
+                    Сравните варианты и подберите кредит по возможностям
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div><!-- /.calccontent__items -->
+
+          <div class="calccontent__description">
+            <h2>Кредитный калькулятор НБКИ</h2>
+            <div class="text">
+              <p>Получение кредита – ответственный шаг, для принятия которого необходимо оценить свои возможности.
+                Кредитный калькулятор НБКИ поможет вам подобрать параметры кредита, платить по которому вам будет
+                максимально комфортно.</p>
+              <p> С помощью кредитного калькулятора НБКИ можно сравнить ежемесячный платеж и сумму переплаты по
+                нескольким кредитам и выбрать оптимальные параметры – сумму кредита, ставку и срок.</p>
+              <p>Для более точного понимания всех параметров кредита, на который вы можете претендовать рекомендуем вам
+                рассчитать в своем <a href="https://person.nbki.ru/login?utm_source=sait&utm_medium=calculator"
+                  target="_blank" class='link_blue'>личном кабинете.</a> Чем выше значение ПКР, тем лучшие
+                условия по кредиту вы можете
+                получить.</p>
+            </div><!-- /.text -->
+          </div><!-- /.calccontent__description -->
+
         </div><!-- /.calccontent -->
       </div>
     </div>
@@ -1046,12 +1224,19 @@
     <script type="text/javascript" src="js/nouislider.min.js"></script>
     <script type="text/javascript" src="js/jquery.inputmask.min.js"></script>
     <script type="text/javascript" src="js/datepicker.min.js"></script>
+    <script type="text/javascript" src="js/wNumb.min.js"></script>
     <!--     <script type="text/javascript" src="js/calc.js"></script>
  -->
     <script>
       var rangeTimeout
 
-      function rangeSliderCreate(slideIndex, slide) {
+      /* function rangeSliderCreate(slideIndex, slide) {
+
+
+      
+
+
+
         var rangeSliderOptions
         var rangeSliderType = $(slide).attr("data-range-slider-type")
         var rangeSliderStart = parseFloat(
@@ -1116,6 +1301,20 @@
             },
             connect: "lower",
           }
+        }  else if (rangeSliderType === "calc_creditRate") {
+          rangeSliderOptions = {
+            start: [rangeSliderStart],
+            step: 0.01,
+            range: {
+                'min': [rangeSliderMin],
+                'max': [rangeSliderMax]
+            },
+            format: wNumb({
+                decimals: 3,
+                thousand: '.',
+                suffix: ' (US $)'
+            })
+        }
         } else {
           rangeSliderOptions = {
             start: [rangeSliderStart],
@@ -1134,16 +1333,16 @@
           rangeSliderOptions
         )
 
+
+     
+
         $(slide.querySelector(".range-slider__ui")).data("slider", rangeSlidersItem)
 
         rangeSlidersItem.on("slide", function (values, handle) {
           clearTimeout(rangeTimeout)
           if (
             1
-            /*   rangeSliderType === "calc_summ" ||
-            rangeSliderType === "size" ||
-            rangeSliderType === "height" ||
-            rangeSliderType === "count"  */
+          
           ) {
             $(this.target)
               .closest(".range-slider")
@@ -1153,7 +1352,7 @@
             $(this.target)
               .closest(".range-slider")
               .find(".form-control")
-              .val(parseFloat(values[handle]).toFixed(2) /* + ' РјВі'*/)
+              .val(parseFloat(values[handle]) )
           } else {
             $(this.target)
               .closest(".range-slider")
@@ -1167,99 +1366,98 @@
             target.closest(".range-slider").find(".form-control").trigger("change")
           }, 500)
         })
-      }
+      } */
 
-      function rangeSliderInit(rangeSliders) {
-        for (var i = 0; i < rangeSliders.length; i++) {
-          rangeSliderCreate(i, rangeSliders[i])
-        }
-
-        $(".range-slider__control").on("change", function () {
-          if (
-            $(this).closest(".range-slider").attr("data-range-slider-type") === "size"
-          ) {
-            if (
-              this.value.replace(/[^0-9]/g, "") >
-              parseInt(this.getAttribute("data-max"))
-            ) {
-              this.value = parseInt(this.getAttribute("data-max"))
-            } else if (
-              this.value.replace(/[^0-9]/g, "") <
-              parseInt(this.getAttribute("data-min")) ||
-              this.value.replace(/[^0-9]/g, "") === ""
-            ) {
-              this.value = parseInt(this.getAttribute("data-min"))
-            }
-            $(this)
-              .next()
-              .data("slider")
-              .set(parseInt(this.value.replace(/[^0-9]/g, "")))
-          }
-
-          if (
-            1
-            /*  $(this).closest(".range-slider").attr("data-range-slider-type") ===
-            "calc_summ" */
-          ) {
-            if (
-              this.value.replace(/[^0-9]/g, "") >
-              parseInt(this.getAttribute("data-max"))
-            ) {
-              this.value = parseInt(this.getAttribute("data-max"))
-            } else if (
-              this.value.replace(/[^0-9]/g, "") <
-              parseInt(this.getAttribute("data-min")) ||
-              this.value.replace(/[^0-9]/g, "") === ""
-            ) {
-              this.value = parseInt(this.getAttribute("data-min"))
-            }
-            $(this)
-              .next()
-              .data("slider")
-              .set(parseInt(this.value.replace(/[^0-9]/g, "")))
-            if (0) {
-              if (
-                parseInt(
-                  $('[name="max"]')
-                    .val()
-                    .replace(/[^0-9]/g, "")
-                ) >
-                parseInt(
-                  $('[name="calc_summ"]')
-                    .val()
-                    .replace(/[^0-9]/g, "")
-                )
-              ) {
-                $('[name="calc_summ"]').val($('[name="max"]').val())
-                $('[name="calc_summ"]')
-                  .next()
-                  .data("slider")
-                  .set(parseInt(this.value.replace(/[^0-9]/g, "")))
-              }
-            }
-          } else if (
-            $(this).closest(".range-slider").attr("data-range-slider-type") ===
-            "volume"
-          ) {
-            if (parseFloat(this.value) > parseFloat(this.getAttribute("data-max"))) {
-              this.value = parseFloat(this.getAttribute("data-max"))
-            } else if (
-              parseFloat(this.value) < parseFloat(this.getAttribute("data-min")) ||
-              parseFloat(this.value) === ""
-            ) {
-              this.value = parseFloat(this.getAttribute("data-min"))
-            }
-            if (!parseFloat(this.value) || parseFloat(this.value) === 0) {
-              this.value = parseFloat(this.getAttribute("data-min"))
-            }
-            $(this)
-              .next()
-              .data("slider")
-              .set(parseFloat(this.value /*.replace(/[^0-9]/g, '')*/).toFixed(2))
-          }
-        })
-      }
-
+      /*  function rangeSliderInit(rangeSliders) {
+         for (var i = 0; i < rangeSliders.length; i++) {
+           rangeSliderCreate(i, rangeSliders[i])
+         }
+ 
+         $(".range-slider__control").on("change", function () {
+           if (
+             $(this).closest(".range-slider").attr("data-range-slider-type") === "size"
+           ) {
+             if (
+               this.value.replace(/[^0-9]/g, "") >
+               parseInt(this.getAttribute("data-max"))
+             ) {
+               this.value = parseInt(this.getAttribute("data-max"))
+             } else if (
+               this.value.replace(/[^0-9]/g, "") <
+               parseInt(this.getAttribute("data-min")) ||
+               this.value.replace(/[^0-9]/g, "") === ""
+             ) {
+               this.value = parseInt(this.getAttribute("data-min"))
+             }
+             $(this)
+               .next()
+               .data("slider")
+               .set(parseInt(this.value.replace(/[^0-9]/g, "")))
+           }
+ 
+           if (
+             1
+        
+           ) {
+             if (
+               this.value.replace(/[^0-9]/g, "") >
+               parseInt(this.getAttribute("data-max"))
+             ) {
+               this.value = parseInt(this.getAttribute("data-max"))
+             } else if (
+               this.value.replace(/[^0-9]/g, "") <
+               parseInt(this.getAttribute("data-min")) ||
+               this.value.replace(/[^0-9]/g, "") === ""
+             ) {
+               this.value = parseInt(this.getAttribute("data-min"))
+             }
+             $(this)
+               .next()
+               .data("slider")
+               .set(parseInt(this.value.replace(/[^0-9]/g, "")))
+             if (0) {
+               if (
+                 parseInt(
+                   $('[name="max"]')
+                     .val()
+                     .replace(/[^0-9]/g, "")
+                 ) >
+                 parseInt(
+                   $('[name="calc_summ"]')
+                     .val()
+                     .replace(/[^0-9]/g, "")
+                 )
+               ) {
+                 $('[name="calc_summ"]').val($('[name="max"]').val())
+                 $('[name="calc_summ"]')
+                   .next()
+                   .data("slider")
+                   .set(parseInt(this.value.replace(/[^0-9]/g, "")))
+               }
+             }
+           } else if (
+             $(this).closest(".range-slider").attr("data-range-slider-type") ===
+             "volume"
+           ) {
+             if (parseFloat(this.value) > parseFloat(this.getAttribute("data-max"))) {
+               this.value = parseFloat(this.getAttribute("data-max"))
+             } else if (
+               parseFloat(this.value) < parseFloat(this.getAttribute("data-min")) ||
+               parseFloat(this.value) === ""
+             ) {
+               this.value = parseFloat(this.getAttribute("data-min"))
+             }
+             if (!parseFloat(this.value) || parseFloat(this.value) === 0) {
+               this.value = parseFloat(this.getAttribute("data-min"))
+             }
+             $(this)
+               .next()
+               .data("slider")
+               .set(parseFloat(this.value ))
+           }
+         })
+       }
+  */
       $(document).ready(function () {
         $("[data-summ-format]").inputmask("integer", {
           mask: "( 999){+|1}",
@@ -1285,11 +1483,7 @@
           rightAlign: false,
         })
         $("[data-rate-format]").inputmask({
-          mask: "( 999){+|1} %",
-          numericInput: true,
-          showMaskOnHover: false,
-          showMaskOnFocus: false,
-          rightAlign: false,
+          mask: "9[9][.9][9] %",
         })
         $("[data-number-format]").inputmask({
           mask: "( 999){+|1}",
@@ -1299,10 +1493,10 @@
           rightAlign: false,
         })
 
-        if ($(".range-slider").length) {
-          var rangeSliders = $(".range-slider")
-          rangeSliderInit(rangeSliders)
-        }
+        /*  if ($(".range-slider").length) {
+           var rangeSliders = $(".range-slider")
+           rangeSliderInit(rangeSliders)
+         } */
       })
       function initDatepicker() {
         $('[data-toggle="datepicker"]').datepicker({
@@ -1454,12 +1648,12 @@
               .text(optionText)
           })
           $(".calcform__select").each((index, item) => {
-            $(item).addClass("calcform__select_initialized")
+            /*   $(item).addClass("calcform__select_initialized") */
             $(item).find(".calcform__select-item:first").addClass("active")
           })
         })
 
-        var selectedItem = $(".calcform__select-selected"),
+        var selectedItem = $(".calcform__select:not(.calcform__select_initialized) .calcform__select-selected"),
           allItems = $(".calcform__select-all")
 
         selectedItem.on("click", function (e) {
@@ -1475,8 +1669,11 @@
           e.stopPropagation()
         })
 
+        $(".calcform__select:not(.calcform__select_initialized)").addClass("calcform__select_initialized")
+
+
         $(document).on("click", function () {
-          var opened = $(".calcform__select-all:not(.all-items-hide)"),
+          var opened = $(".calcform__select:not(.calcform__select_initialized)"),
             index = opened.parent().index()
 
           customSelect
@@ -1488,14 +1685,27 @@
             .find(".calcform__select-selected")
             .removeClass("arrowanim")
         })
+
+
+
       }
 
       $(document).ready(function () {
         let count = $("[data-newrow]").length
 
+        $('[data-clearcalc]').on('click', function (e) {
+          e.preventDefault()
+          $('.calcform__newrowscontainer').html("")
+          $(this).closest(".calcform__item").removeClass('active')
+          $(this).closest(".calcform__block").removeClass('active')
+        })
+
         $("[data-addnewrow]").on("click", function (e) {
           e.preventDefault()
           count++
+
+          $(this).closest(".calcform__item").addClass('active')
+          $(this).closest(".calcform__block").addClass('active')
 
           $('.calcform__newrowscontainer').append(`<div class="calcform__block calcform__block_newblock" data-newblock="${count}">
     <div class="calcform__newrow" data-newrow="${count}">
@@ -1504,12 +1714,13 @@
           <div class="calcform__item calcform__item_select">
             <div class="calcform__input">
               <div class="calcform__select">
+                <span class="placeholder">Периодичность погашения</span><!-- /.placeholder -->
+
                 <select  name='newrow_${count}_1'>
                   <option value="0">Единовременно</option>
                   <option value="1">Не Единовременно</option>
                 </select>
               </div>
-              <span class="placeholder">Периодичность погашения</span><!-- /.placeholder -->
             </div><!-- /.calcform__input -->
           </div><!-- /.calcform__item -->
         </div><!-- /.calcnewrow__col -->
@@ -1517,29 +1728,32 @@
           <div class="calcform__item calcform__item_select">
             <div class="calcform__input">
               <div class="calcform__select">
+                <span class="placeholder">Тип расчёта</span><!-- /.placeholder -->
+
                 <select name='newrow_${count}_2'>
                   <option value="0">Уменьшение срока кредита</option>
                   <option value="1">Не Уменьшение срока кредита</option>
                 </select>
               </div>
-              <span class="placeholder">Тип расчёта</span><!-- /.placeholder -->
             </div><!-- /.calcform__input -->
           </div><!-- /.calcform__item -->
         </div><!-- /.calcnewrow__col -->
         <div class="calcnewrow__col">
-          <div class="calcform__item calcform__item_select">
+          <div class="calcform__item ">
             <div class="calcform__input">
-              <input type="text" data-number-format="" value='20000000' name='newrow_${count}_3'>
               <span class="placeholder">Сумма</span><!-- /.placeholder -->
+
+              <input type="text" data-number-format="" value='20000000' name='newrow_${count}_3'>
             </div><!-- /.calcform__input -->
           </div><!-- /.calcform__item -->
         </div><!-- /.calcnewrow__col -->
         <div class="calcnewrow__col">
           <div class="calcform__item">
-            <div class="calcform__input">
+            <div class="calcform__input calcform__input_date">
               <label for="">
-                <input type="text" data-toggle="datepicker" class='expand_more' name='newrow_${count}_4'>
                 <span class="placeholder">Дата</span>
+
+                <input type="text" data-toggle="datepicker" class='expand_more' name='newrow_${count}_4'>
               </label>
             </div><!-- /.calcform__input -->
           </div><!-- /.calcform__item -->
@@ -1556,9 +1770,24 @@
   </div><!-- /.calcform__block calcform__block_newblock -->`)
 
 
+
+          $(`[data-newblock-${count}] [data-number-format]`).inputmask({
+            rightAlign: false,
+            alias: 'numeric',
+            digits: 2,
+            suffix: ' м³',
+            showMaskOnHover: false,
+            showMaskOnFocus: false,
+          });
+
+
+
           initSelect($(".calcform__select").not(".calcform__select_initialized"))
+          /*  if ($(window).width() > 767) { */
           initDatepicker()
+          /*  } */
         })
+
 
         $(document).on("click", "[data-remove]", function (e) {
           e.preventDefault()
@@ -1570,8 +1799,61 @@
       })
 
       $(document).ready(function () {
+        $(document).on("click", ".calcform__block_nob.active h1", function (e) {
+          $('.calcform__newrowscontainer').slideToggle()
+          $(this).closest('.calcform__block_nob').toggleClass('expanded')
+        })
+
+
         initSelect($(".calcform__select"))
-        initDatepicker()
+
+/*         if ($(window).width() > 767) {
+ */          initDatepicker()
+        /*         }
+        
+         */
+
+        function initRangeslider() {
+          var sliderFormat = document.getElementById('calc_creditRate_slider');
+
+          noUiSlider.create(sliderFormat, {
+            start: [parseFloat($('#calc_creditRate').attr('value'))],
+            step: $('#calc_creditRate').data('step'),
+            range: {
+              'min': [parseFloat($('#calc_creditRate').data('min'))],
+              'max': [parseFloat($('#calc_creditRate').data('max'))],
+            },
+            format: wNumb({
+              decimals: 2,
+            }),
+            connect: 'lower'
+
+          });
+
+          sliderFormat.noUiSlider.on('slide', function (values, handle) {
+            $('#calc_creditRate').val(values[0])
+          });
+
+          $('#calc_creditRate').on('change', function () {
+            let val = parseFloat($(this).val())
+
+            if (val > parseFloat($('#calc_creditRate').data('max'))) {
+              val = parseFloat($('#calc_creditRate').data('max'))
+            }
+
+            if (val < parseFloat($('#calc_creditRate').data('min'))) {
+              val = parseFloat($('#calc_creditRate').data('min'))
+            }
+            $(this).val(val)
+
+            sliderFormat.noUiSlider.set(val, null);
+
+          })
+        }
+
+
+
+
       })
 
     </script>
