@@ -1467,21 +1467,7 @@
           rightAlign: false,
         })
 
-        $("[data-volume-format]").inputmask({
-          rightAlign: false,
-          alias: "numeric",
-          digits: 2,
-          suffix: " м³",
-          showMaskOnHover: false,
-          showMaskOnFocus: false,
-        })
-        $("[data-size-format]").inputmask({
-          mask: "( 999){+|1} см",
-          numericInput: true,
-          showMaskOnHover: false,
-          showMaskOnFocus: false,
-          rightAlign: false,
-        })
+
         $("[data-rate-format]").inputmask({
           mask: "9[9][.9][9] %",
         })
@@ -1783,18 +1769,14 @@
 
 
           initSelect($(".calcform__select").not(".calcform__select_initialized"))
-          /*  if ($(window).width() > 767) { */
           initDatepicker()
-          /*  } */
         })
 
 
         $(document).on("click", "[data-remove]", function (e) {
           e.preventDefault()
           let id = $(this).data("remove")
-          /*   if ($("[data-remove]").length > 1) { */
           $(this).closest(`[data-newblock=${id}]`).remove()
-          /* } */
         })
       })
 
@@ -1807,49 +1789,91 @@
 
         initSelect($(".calcform__select"))
 
-/*         if ($(window).width() > 767) {
- */          initDatepicker()
-        /*         }
-        
-         */
+        initDatepicker()
 
-        function initRangeslider() {
-          var sliderFormat = document.getElementById('calc_creditRate_slider');
 
-          noUiSlider.create(sliderFormat, {
-            start: [parseFloat($('#calc_creditRate').attr('value'))],
-            step: $('#calc_creditRate').data('step'),
-            range: {
-              'min': [parseFloat($('#calc_creditRate').data('min'))],
-              'max': [parseFloat($('#calc_creditRate').data('max'))],
-            },
-            format: wNumb({
-              decimals: 2,
-            }),
-            connect: 'lower'
 
+        function initRangeslider(item) {
+
+          let itemId = `#${item.closest('.range-slider').querySelector('input').getAttribute('id')}`
+
+          console.log(itemId)
+
+          let rangeSliderType = $(itemId).closest('.range-slider').data('range-slider-type')
+
+          let rangeSliderMin = parseFloat($(itemId).data('min'))
+          let rangeSliderMax = parseFloat($(itemId).data('max'))
+          let rangeSliderStart = parseFloat($(itemId).attr('value'))
+          let rangeSliderStep = parseFloat($(itemId).data('step')) || 1
+
+          let rangeSliderOptions = null
+
+          if (rangeSliderType === "calc_summ") {
+            rangeSliderOptions = {
+              start: [rangeSliderStart],
+              range: {
+                min: [rangeSliderMin, 1],
+                "20%": [100000, 1000],
+                "30%": [500000, 5000],
+                "50%": [5000000, 10000],
+                max: [rangeSliderMax],
+              },
+              connect: "lower",
+            }
+          } else if (rangeSliderType === "calc_creditRate") {
+            rangeSliderOptions = {
+              start: [rangeSliderStart],
+              step: 0.01,
+              range: {
+                'min': [rangeSliderMin],
+                'max': [rangeSliderMax],
+              },
+              format: wNumb({
+                decimals: 2,
+              }),
+              connect: 'lower'
+            }
+          } else {
+            rangeSliderOptions = {
+              start: [rangeSliderStart],
+              range: {
+                min: [rangeSliderMin],
+                max: [rangeSliderMax],
+              },
+              connect: "lower",
+            }
+          }
+
+          noUiSlider.create(item, rangeSliderOptions);
+
+          item.noUiSlider.on('slide', function (values, handle) {
+            $(itemId).val(values[0])
           });
 
-          sliderFormat.noUiSlider.on('slide', function (values, handle) {
-            $('#calc_creditRate').val(values[0])
-          });
+          $(itemId).on('change', function () {
+            let val = parseFloat(String($(itemId).val()).replace(/\s/g, ''))
+            console.log(val)
 
-          $('#calc_creditRate').on('change', function () {
-            let val = parseFloat($(this).val())
-
-            if (val > parseFloat($('#calc_creditRate').data('max'))) {
-              val = parseFloat($('#calc_creditRate').data('max'))
+            if (val > rangeSliderMax) {
+              val = rangeSliderMax
+              $(this).val(rangeSliderMax)
             }
 
-            if (val < parseFloat($('#calc_creditRate').data('min'))) {
-              val = parseFloat($('#calc_creditRate').data('min'))
-            }
-            $(this).val(val)
+            if (val < rangeSliderMin) {
+              val = rangeSliderMin
+              $(this).val(rangeSliderMin)
 
-            sliderFormat.noUiSlider.set(val, null);
+            }
+            item.noUiSlider.set(val, null);
 
           })
         }
+
+        let sliders = document.querySelectorAll(".range-slider__ui")
+
+        sliders.forEach(item => {
+          initRangeslider(item)
+        })
 
 
 
